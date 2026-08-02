@@ -1,0 +1,242 @@
+{
+  "generator": {
+    "name": "HotelAIOS SEO Data Generator",
+    "version": "1.0.0",
+    "generated_at": "2026-08-03T03:19:52+08:00"
+  },
+  "property_id": "sanlitian-oxygen-guesthouse-001",
+  "site": {
+    "base_url": "",
+    "canonical_url": "",
+    "robots": "index,follow",
+    "sitemap": {
+      "path": "/sitemap.xml",
+      "url": "/sitemap.xml"
+    },
+    "default_language": "zh-CN",
+    "supported_languages": [
+      "zh-CN",
+      "en"
+    ]
+  },
+  "meta": {
+    "homepage": {
+      "title": {
+        "zh": "三里田供氧客栈｜丽江古城三眼井旁供氧精品客栈",
+        "en": "Sanlitian Oxygen Boutique Guesthouse | Oxygen Boutique Guesthouse in Lijiang Old Town"
+      },
+      "description": {
+        "zh": "三里田供氧客栈位于丽江古城三眼井旁，提供供氧客房、免费中式早餐、传统庭院、观景露台、茶室及中英文服务。",
+        "en": "Stay beside Three-Eyed Well in Lijiang Old Town with oxygen-equipped rooms, complimentary breakfast, courtyard, tea room and warm hospitality."
+      },
+      "keywords": {
+        "zh": [
+          "丽江供氧客栈",
+          "丽江古城客栈",
+          "三眼井客栈",
+          "丽江住宿",
+          "丽江精品客栈"
+        ],
+        "en": [
+          "Lijiang guesthouse",
+          "oxygen guesthouse",
+          "Lijiang Old Town hotel",
+          "Three-Eyed Well",
+          "boutique guesthouse"
+        ]
+      }
+    }
+  },
+  "open_graph": {
+    "type": "website",
+    "site_name": "Sanlitian Oxygen Boutique Guesthouse",
+    "locale": "zh_CN",
+    "url": "",
+    "image": "",
+    "title": {
+      "zh": "三里田供氧客栈｜丽江古城三眼井旁供氧精品客栈",
+      "en": "Sanlitian Oxygen Boutique Guesthouse | Oxygen Boutique Guesthouse in Lijiang Old Town"
+    },
+    "description": {
+      "zh": "三里田供氧客栈位于丽江古城三眼井旁，提供供氧客房、免费中式早餐、传统庭院、观景露台、茶室及中英文服务。",
+      "en": "Stay beside Three-Eyed Well in Lijiang Old Town with oxygen-equipped rooms, complimentary breakfast, courtyard, tea room and warm hospitality."
+    }
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "site": "",
+    "creator": "",
+    "image": "",
+    "title": {
+      "zh": "三里田供氧客栈｜丽江古城三眼井旁供氧精品客栈",
+      "en": "Sanlitian Oxygen Boutique Guesthouse | Oxygen Boutique Guesthouse in Lijiang Old Town"
+    },
+    "description": {
+      "zh": "三里田供氧客栈位于丽江古城三眼井旁，提供供氧客房、免费中式早餐、传统庭院、观景露台、茶室及中英文服务。",
+      "en": "Stay beside Three-Eyed Well in Lijiang Old Town with oxygen-equipped rooms, complimentary breakfast, courtyard, tea room and warm hospitality."
+    }
+  },
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Sanlitian Oxygen Boutique Guesthouse",
+    "telephone": "+86 131 8775 9333",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "中国云南省丽江市古城区光义街光碧巷69号",
+      "addressLocality": "丽江市",
+      "addressRegion": "云南省",
+      "postalCode": "674100",
+      "addressCountry": "CN"
+    },
+    "description": "三里田供氧客栈位于丽江古城三眼井旁，提供供氧客房、免费中式早餐、传统庭院、观景露台、茶室及中英文服务。",
+    "geo": {
+      "latitude": 26.880675,
+      "longitude": 100.224167,
+      "latitude_dms": "26°52′50.43″ N",
+      "longitude_dms": "100°13′27.0″ E",
+      "source": "owner-provided-and-converted",
+      "verification_status": "pending-google-maps-pin-verification"
+    },
+    "email": "982316252@qq.com"
+  },
+  "pages": [
+    {
+      "id": "home",
+      "path": "/",
+      "url": "/",
+      "enabled": true
+    },
+    {
+      "id": "rooms",
+      "path": "/rooms/",
+      "url": "/rooms/",
+      "enabled": true
+    },
+    {
+      "id": "facilities",
+      "path": "/facilities/",
+      "url": "/facilities/",
+      "enabled": true
+    },
+    {
+      "id": "story",
+      "path": "/story/",
+      "url": "/story/",
+      "enabled": true
+    },
+    {
+      "id": "location",
+      "path": "/location/",
+      "url": "/location/",
+      "enabled": true
+    },
+    {
+      "id": "contact",
+      "path": "/contact/",
+      "url": "/contact/",
+      "enabled": true
+    },
+    {
+      "id": "privacy",
+      "path": "/privacy/",
+      "url": "/privacy/",
+      "enabled": true
+    },
+    {
+      "id": "terms",
+      "path": "/terms/",
+      "url": "/terms/",
+      "enabled": true
+    }
+  ],
+  "images": [],
+  "ai_search": {
+    "enabled": true,
+    "summary_source": "brand.yaml:ai_brand_profile.canonical_summary_en",
+    "preferred_topics": [
+      "oxygen accommodation",
+      "Lijiang Old Town",
+      "Three-Eyed Well",
+      "boutique guesthouse"
+    ],
+    "factual_only": true,
+    "prohibit_unverified_claims": true
+  },
+  "rendering": {
+    "meta_tags": {
+      "title_zh": "三里田供氧客栈｜丽江古城三眼井旁供氧精品客栈",
+      "title_en": "Sanlitian Oxygen Boutique Guesthouse | Oxygen Boutique Guesthouse in Lijiang Old Town",
+      "description_zh": "三里田供氧客栈位于丽江古城三眼井旁，提供供氧客房、免费中式早餐、传统庭院、观景露台、茶室及中英文服务。",
+      "description_en": "Stay beside Three-Eyed Well in Lijiang Old Town with oxygen-equipped rooms, complimentary breakfast, courtyard, tea room and warm hospitality.",
+      "keywords_zh": "丽江供氧客栈, 丽江古城客栈, 三眼井客栈, 丽江住宿, 丽江精品客栈",
+      "keywords_en": "Lijiang guesthouse, oxygen guesthouse, Lijiang Old Town hotel, Three-Eyed Well, boutique guesthouse",
+      "canonical": "",
+      "robots": "index,follow"
+    },
+    "robots_txt": {
+      "user_agent": "*",
+      "allow": "/",
+      "sitemap": "/sitemap.xml"
+    },
+    "sitemap_entries": [
+      {
+        "loc": "/",
+        "changefreq": "weekly",
+        "priority": 1.0
+      },
+      {
+        "loc": "/rooms/",
+        "changefreq": "weekly",
+        "priority": 0.8
+      },
+      {
+        "loc": "/facilities/",
+        "changefreq": "weekly",
+        "priority": 0.8
+      },
+      {
+        "loc": "/story/",
+        "changefreq": "weekly",
+        "priority": 0.8
+      },
+      {
+        "loc": "/location/",
+        "changefreq": "weekly",
+        "priority": 0.8
+      },
+      {
+        "loc": "/contact/",
+        "changefreq": "weekly",
+        "priority": 0.8
+      },
+      {
+        "loc": "/privacy/",
+        "changefreq": "weekly",
+        "priority": 0.8
+      },
+      {
+        "loc": "/terms/",
+        "changefreq": "weekly",
+        "priority": 0.8
+      }
+    ]
+  },
+  "governance": {
+    "factual_only": true,
+    "prohibit_unverified_claims": true,
+    "manual_review_required": true,
+    "validation_required_before_publish": true
+  },
+  "sources": {
+    "registry": "17_Config\\properties.yaml",
+    "property_directory": "17_Config\\properties\\sanlitian-oxygen-guesthouse-001",
+    "files": [
+      "hotel.yaml",
+      "brand.yaml",
+      "website.yaml",
+      "seo.yaml",
+      "ota.yaml"
+    ]
+  }
+}

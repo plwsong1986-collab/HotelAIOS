@@ -1,0 +1,1696 @@
+{
+  "loader": {
+    "name": "HotelAIOS Property Configuration Loader",
+    "version": "1.0.0"
+  },
+  "property_id": "sanlitian-oxygen-guesthouse-001",
+  "registry_record": {
+    "property_id": "sanlitian-oxygen-guesthouse-001",
+    "property_name": "三里田供氧客栈",
+    "property_name_en": "Sanlitian Oxygen Boutique Guesthouse",
+    "property_type": "guesthouse",
+    "property_type_name": "精品供氧客栈",
+    "property_type_name_en": "Boutique Oxygen Guesthouse",
+    "operating_model": "independent",
+    "status": "active",
+    "enabled": true,
+    "deletion_protection": true,
+    "config_path": "properties/sanlitian-oxygen-guesthouse-001",
+    "publishing": {
+      "public_visibility": "private",
+      "website_enabled": true,
+      "ai_enabled": true,
+      "ota_enabled": true,
+      "knowledge_enabled": true,
+      "crm_enabled": false,
+      "analytics_enabled": false,
+      "deployment_enabled": false
+    },
+    "localization": {
+      "default_language": "zh-CN",
+      "supported_languages": [
+        "zh-CN",
+        "en"
+      ],
+      "timezone": "Asia/Shanghai"
+    },
+    "location": {
+      "country_code": "CN",
+      "country": "China",
+      "country_zh": "中国",
+      "province": "Yunnan",
+      "province_zh": "云南省",
+      "city": "Lijiang",
+      "city_zh": "丽江市",
+      "district": "Gucheng District",
+      "district_zh": "古城区"
+    },
+    "configuration_files": {
+      "hotel": "hotel.yaml",
+      "brand": "brand.yaml",
+      "website": "website.yaml",
+      "seo": "seo.yaml",
+      "ota": "ota.yaml"
+    },
+    "ownership": {
+      "management_company": "云南三里田酒店管理有限公司",
+      "management_company_en": "Yunnan Sanlitian Hotel Management Co., Ltd.",
+      "repository_owner": "",
+      "property_manager": ""
+    },
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "source": "property-owner",
+      "verification_status": "partially-verified",
+      "notes": "HotelAIOS 登记的第一家正式物业。 三里田供氧客栈位于中国云南省丽江市古城区， 是一家以供氧客房、传统庭院、三眼井在地文化和 温暖家庭式服务为核心特色的精品客栈。\n"
+    }
+  },
+  "sources": {
+    "registry": "17_Config\\properties.yaml",
+    "property_directory": "17_Config\\properties\\sanlitian-oxygen-guesthouse-001",
+    "files": [
+      "hotel.yaml",
+      "brand.yaml",
+      "website.yaml",
+      "seo.yaml",
+      "ota.yaml"
+    ]
+  },
+  "config": {
+    "hotel": {
+      "property": {
+        "property_id": "sanlitian-oxygen-guesthouse-001",
+        "property_name": "三里田供氧客栈",
+        "property_name_en": "Sanlitian Oxygen Boutique Guesthouse",
+        "short_name": "三里田供氧",
+        "short_name_en": "Sanlitian Oxygen",
+        "property_type": "guesthouse",
+        "property_type_name": "精品供氧客栈",
+        "property_type_name_en": "Boutique Oxygen Guesthouse",
+        "operating_model": "independent",
+        "lifecycle_status": "active",
+        "enabled": true,
+        "deletion_protection": true
+      },
+      "metadata": {
+        "schema_version": "1.0",
+        "file_version": "4.0.0",
+        "created_at": "2026-08-02",
+        "updated_at": "2026-08-02",
+        "maintained_by": "HotelAIOS",
+        "source": "property-owner",
+        "verification_status": "partially-verified",
+        "review_required": true,
+        "default_language": "zh-CN",
+        "timezone": "Asia/Shanghai"
+      },
+      "legal_identity": {
+        "operating_company": {
+          "name_zh": "云南三里田酒店管理有限公司",
+          "name_en": "Yunnan Sanlitian Hotel Management Co., Ltd."
+        },
+        "registration_number": "",
+        "tax_identifier": "",
+        "ownership_type": "independent",
+        "license_status": "pending-entry"
+      },
+      "commercial_identity": {
+        "display_name_zh": "三里田供氧客栈",
+        "display_name_en": "Sanlitian Oxygen Boutique Guesthouse",
+        "accommodation_category": "Boutique Guesthouse",
+        "market_positioning_zh": "丽江古城三眼井旁的供氧精品客栈",
+        "market_positioning_en": "An oxygen-focused boutique guesthouse beside Three-Eyed Well in Lijiang Old Town",
+        "opening": {
+          "opening_year": 2026,
+          "opening_month": 1,
+          "opening_date": "2026-01",
+          "operating_status": "active"
+        }
+      },
+      "location": {
+        "country": {
+          "code": "CN",
+          "name_zh": "中国",
+          "name_en": "China"
+        },
+        "province": {
+          "name_zh": "云南省",
+          "name_en": "Yunnan"
+        },
+        "city": {
+          "name_zh": "丽江市",
+          "name_en": "Lijiang"
+        },
+        "district": {
+          "name_zh": "古城区",
+          "name_en": "Gucheng District"
+        },
+        "locality": {
+          "name_zh": "丽江古城",
+          "name_en": "Lijiang Old Town"
+        },
+        "neighborhood": {
+          "name_zh": "三眼井片区",
+          "name_en": "Three-Eyed Well Area"
+        },
+        "street": {
+          "name_zh": "光义街光碧巷69号",
+          "name_en": "No. 69, Guangbi Alley, Guangyi Street"
+        },
+        "full_address": {
+          "zh": "中国云南省丽江市古城区光义街光碧巷69号",
+          "en": "No. 69, Guangbi Alley, Guangyi Street, Gucheng District, Lijiang, Yunnan 674100, China"
+        },
+        "postal_code": "674100",
+        "coordinates": {
+          "latitude": 26.880675,
+          "longitude": 100.224167,
+          "latitude_dms": "26°52′50.43″ N",
+          "longitude_dms": "100°13′27.0″ E",
+          "source": "owner-provided-and-converted",
+          "verification_status": "pending-google-maps-pin-verification"
+        },
+        "altitude_meters": null,
+        "timezone": "Asia/Shanghai"
+      },
+      "contact": {
+        "phone": {
+          "primary": "+86 131 8775 9333",
+          "normalized": "+8613187759333",
+          "reservations": "+86 131 8775 9333",
+          "emergency": ""
+        },
+        "email": {
+          "primary": "982316252@qq.com",
+          "reservations": "982316252@qq.com"
+        },
+        "wechat": {
+          "account": "13187759333",
+          "display": "+86 13187759333"
+        },
+        "whatsapp": {
+          "number": "+44 7907 179618",
+          "normalized": "+447907179618"
+        },
+        "website": {
+          "url": "",
+          "status": "coming-soon"
+        }
+      },
+      "operations": {
+        "front_desk": {
+          "available": true,
+          "hours": "",
+          "twenty_four_hours": null
+        },
+        "check_in": {
+          "standard_time": "14:00",
+          "early_check_in_available": null,
+          "identification_required": null
+        },
+        "check_out": {
+          "standard_time": "12:00",
+          "late_check_out_available": null
+        },
+        "capacity": {
+          "total_rooms": 16,
+          "maximum_guests": 50,
+          "building_count": 1,
+          "floor_count": null
+        },
+        "accepted_currency": [
+          "CNY"
+        ],
+        "languages": {
+          "default": "zh-CN",
+          "supported": [
+            "zh-CN",
+            "en"
+          ],
+          "chinese_available": true,
+          "english_available": true,
+          "other_languages": []
+        }
+      },
+      "accommodation": {
+        "total_rooms": 16,
+        "total_room_types": 5,
+        "inventory_verified": true,
+        "room_types": [
+          {
+            "room_type_id": "king-room",
+            "name_zh": "大床房",
+            "name_en": "King Room",
+            "quantity": 7,
+            "maximum_guests": null,
+            "room_size_sqm": null,
+            "bed_configuration": {
+              "bed_type": "king",
+              "bed_count": 1,
+              "bed_size": ""
+            },
+            "oxygen_supply": true,
+            "status": "active"
+          },
+          {
+            "room_type_id": "twin-room",
+            "name_zh": "双床房",
+            "name_en": "Twin Room",
+            "quantity": 3,
+            "maximum_guests": null,
+            "room_size_sqm": null,
+            "bed_configuration": {
+              "bed_type": "twin",
+              "bed_count": 2,
+              "bed_size": ""
+            },
+            "oxygen_supply": true,
+            "status": "active"
+          },
+          {
+            "room_type_id": "family-room",
+            "name_zh": "家庭房",
+            "name_en": "Family Room",
+            "quantity": 3,
+            "maximum_guests": null,
+            "room_size_sqm": null,
+            "bed_configuration": {
+              "bed_type": "mixed",
+              "bed_count": null,
+              "bed_size": ""
+            },
+            "oxygen_supply": true,
+            "status": "active"
+          },
+          {
+            "room_type_id": "loft-family-room",
+            "name_zh": "复式家庭房",
+            "name_en": "Loft Family Room",
+            "quantity": 2,
+            "maximum_guests": null,
+            "room_size_sqm": null,
+            "bed_configuration": {
+              "bed_type": "mixed",
+              "bed_count": null,
+              "bed_size": ""
+            },
+            "oxygen_supply": true,
+            "status": "active"
+          },
+          {
+            "room_type_id": "private-villa",
+            "name_zh": "独栋别墅",
+            "name_en": "Private Villa",
+            "quantity": 1,
+            "maximum_guests": null,
+            "room_size_sqm": null,
+            "bed_configuration": {
+              "bed_type": "mixed",
+              "bed_count": null,
+              "bed_size": ""
+            },
+            "oxygen_supply": true,
+            "status": "active"
+          }
+        ]
+      },
+      "oxygen_service": {
+        "available": true,
+        "service_name_zh": "客房供氧服务",
+        "service_name_en": "In-room Oxygen Supply",
+        "coverage": "guest-rooms",
+        "operating_hours": "continuous",
+        "system_type": "whole-room-oxygen-system",
+        "equipment_details": "",
+        "medical_service": false,
+        "medical_claims_allowed": false,
+        "description_zh": "客房配置持续供氧相关设施，用于提升高原旅居舒适度。",
+        "description_en": "Guest rooms provide oxygen-related facilities intended to support a more comfortable high-altitude stay.",
+        "disclaimer_zh": "客栈供氧设施不属于医疗诊断、治疗或急救服务；如出现明显身体不适，请及时寻求专业医疗帮助。",
+        "disclaimer_en": "Oxygen-related facilities are not a substitute for medical diagnosis, treatment or emergency care."
+      },
+      "breakfast": {
+        "available": true,
+        "included": true,
+        "complimentary": true,
+        "type": "chinese",
+        "name_zh": "免费中式早餐",
+        "name_en": "Complimentary Chinese Breakfast",
+        "serving_time": {
+          "start": "08:00",
+          "end": "10:00"
+        },
+        "serving_location": "",
+        "dietary_options": [],
+        "reservation_required": false
+      },
+      "internet": {
+        "wifi_available": true,
+        "complimentary": true,
+        "advertised_speed_mbps": 300,
+        "coverage": "property-wide",
+        "network_name": "",
+        "password_management": "private",
+        "description_zh": "300 Mbps 高速无线网络",
+        "description_en": "300 Mbps high-speed Wi-Fi"
+      },
+      "climate_and_water": {
+        "air_conditioning": {
+          "available": true,
+          "type": "independent-central-air-conditioning",
+          "cooling_available": true,
+          "heating_available": true,
+          "independently_controlled": true
+        },
+        "hot_water": {
+          "available": true,
+          "twenty_four_hours": true
+        },
+        "ventilation": {
+          "natural_ventilation": true,
+          "mechanical_ventilation": null
+        }
+      },
+      "facilities": {
+        "garden": {
+          "available": true,
+          "name_zh": "中式传统花园",
+          "name_en": "Traditional Chinese Garden"
+        },
+        "terrace": {
+          "available": true,
+          "name_zh": "三眼井观景露台",
+          "name_en": "Viewing Terrace Overlooking Three-Eyed Well",
+          "description_zh": "可俯瞰三眼井的观景露台",
+          "description_en": "Viewing terrace overlooking Three-Eyed Well"
+        },
+        "tea_room": {
+          "available": true,
+          "name_zh": "传统茶室",
+          "name_en": "Traditional Tea Room"
+        },
+        "elevator": {
+          "available": null
+        },
+        "luggage_storage": {
+          "available": null
+        },
+        "public_lounge": {
+          "available": null
+        },
+        "reception_area": {
+          "available": true
+        }
+      },
+      "laundry": {
+        "available": true,
+        "complimentary": true,
+        "self_service": true,
+        "washer_available": true,
+        "dryer_available": true,
+        "ironing_available": null,
+        "description_zh": "免费洗衣机和烘干机",
+        "description_en": "Complimentary washer and dryer"
+      },
+      "parking": {
+        "available": true,
+        "on_site": false,
+        "type": "public-parking",
+        "name_zh": "白龙广场公共停车场",
+        "name_en": "Bailong Square Public Parking Lot",
+        "fee": null,
+        "reservation_required": null,
+        "distance_meters": null,
+        "directions": ""
+      },
+      "transportation": {
+        "supported_modes": [
+          "taxi",
+          "airport-transfer",
+          "walking"
+        ],
+        "taxi_assistance": true,
+        "airport_transfer": {
+          "available": true,
+          "complimentary": null,
+          "reservation_required": true,
+          "fee": null
+        },
+        "railway_station_transfer": {
+          "available": null,
+          "reservation_required": null,
+          "fee": null
+        },
+        "walking_access": {
+          "lijiang_old_town": true,
+          "description_zh": "可步行前往丽江古城主要街巷与景点",
+          "description_en": "Walking access to the main streets and attractions of Lijiang Old Town"
+        },
+        "nearest_airport": {
+          "name_zh": "",
+          "name_en": "",
+          "distance_km": null
+        },
+        "nearest_railway_station": {
+          "name_zh": "",
+          "name_en": "",
+          "distance_km": null
+        }
+      },
+      "nearby_places": [
+        {
+          "place_id": "three-eyed-well",
+          "name_zh": "三眼井",
+          "name_en": "Three-Eyed Well",
+          "category": "landmark",
+          "distance_meters": null,
+          "walking_minutes": null
+        },
+        {
+          "place_id": "mu-mansion",
+          "name_zh": "木府",
+          "name_en": "Mu Mansion",
+          "category": "attraction",
+          "distance_meters": null,
+          "walking_minutes": null
+        },
+        {
+          "place_id": "lion-hill",
+          "name_zh": "狮子山",
+          "name_en": "Lion Hill",
+          "category": "attraction",
+          "distance_meters": null,
+          "walking_minutes": null
+        },
+        {
+          "place_id": "wangu-pavilion",
+          "name_zh": "万古楼",
+          "name_en": "Wangu Pavilion",
+          "category": "attraction",
+          "distance_meters": null,
+          "walking_minutes": null
+        },
+        {
+          "place_id": "sifang-street",
+          "name_zh": "四方街",
+          "name_en": "Sifang Street",
+          "category": "attraction",
+          "distance_meters": null,
+          "walking_minutes": null
+        },
+        {
+          "place_id": "zhongyi-market",
+          "name_zh": "忠义市场",
+          "name_en": "Zhongyi Market",
+          "category": "market",
+          "distance_meters": null,
+          "walking_minutes": null
+        },
+        {
+          "place_id": "zhongyi-night-market",
+          "name_zh": "忠义夜市",
+          "name_en": "Zhongyi Night Market",
+          "category": "night-market",
+          "distance_meters": null,
+          "walking_minutes": null
+        },
+        {
+          "place_id": "yulong-snow-mountain-shuttle-stop",
+          "name_zh": "玉龙雪山专线车乘车点",
+          "name_en": "Yulong Snow Mountain Shuttle Bus Stop",
+          "category": "transportation",
+          "distance_meters": null,
+          "walking_minutes": null
+        }
+      ],
+      "payments": {
+        "accepted": {
+          "cash": true,
+          "visa": true,
+          "mastercard": true,
+          "unionpay": true,
+          "alipay": true,
+          "wechat_pay": true,
+          "american_express": false
+        },
+        "currencies": [
+          "CNY"
+        ],
+        "deposits": {
+          "required": null,
+          "amount": null,
+          "currency": "CNY"
+        },
+        "invoicing": {
+          "available": null,
+          "invoice_type": []
+        }
+      },
+      "guest_segments": {
+        "couples": {
+          "supported": true
+        },
+        "families": {
+          "supported": true
+        },
+        "children": {
+          "supported": true
+        },
+        "seniors": {
+          "supported": true
+        },
+        "international_guests": {
+          "supported": true
+        },
+        "long_stay": {
+          "supported": true
+        },
+        "groups": {
+          "supported": true,
+          "maximum_group_size": null
+        }
+      },
+      "policies": {
+        "children": {
+          "allowed": true,
+          "age_definition": "",
+          "extra_bed_available": null,
+          "crib_available": null
+        },
+        "pets": {
+          "allowed": null,
+          "restrictions": ""
+        },
+        "smoking": {
+          "policy": "",
+          "designated_area_available": null
+        },
+        "quiet_hours": {
+          "enabled": null,
+          "start": "",
+          "end": ""
+        },
+        "parties": {
+          "allowed": null
+        },
+        "visitors": {
+          "allowed": null,
+          "registration_required": null
+        },
+        "cancellation": {
+          "policy_reference": "ota.yaml",
+          "property_level_default": ""
+        },
+        "damage_deposit": {
+          "required": null,
+          "amount": null,
+          "currency": "CNY"
+        },
+        "identification": {
+          "required": null,
+          "accepted_documents": []
+        }
+      },
+      "accessibility": {
+        "wheelchair_accessible": null,
+        "step_free_access": null,
+        "accessible_rooms_available": null,
+        "accessible_bathroom_available": null,
+        "elevator_available": null,
+        "assistance_available": null,
+        "notes": ""
+      },
+      "safety": {
+        "fire_extinguishers": null,
+        "smoke_detectors": null,
+        "carbon_monoxide_detectors": null,
+        "emergency_lighting": null,
+        "evacuation_plan": null,
+        "first_aid_kit": null,
+        "security_cameras_public_areas": null,
+        "twenty_four_hour_security": null,
+        "emergency_numbers": {
+          "police": "110",
+          "fire": "119",
+          "ambulance": "120"
+        }
+      },
+      "sustainability": {
+        "enabled": null,
+        "waste_sorting": null,
+        "reusable_amenities": null,
+        "water_saving": null,
+        "energy_saving": null,
+        "local_sourcing": null,
+        "notes": ""
+      },
+      "media": {
+        "logo": "",
+        "cover_image": "",
+        "gallery": [],
+        "room_galleries": {},
+        "floor_plans": [],
+        "virtual_tour_url": "",
+        "video_urls": [],
+        "media_verification_status": "not-provided"
+      },
+      "systems": {
+        "website_enabled": true,
+        "ai_enabled": true,
+        "knowledge_enabled": true,
+        "rag_enabled": true,
+        "ota_enabled": true,
+        "crm_enabled": false,
+        "analytics_enabled": false,
+        "deployment_enabled": false,
+        "booking_engine_enabled": false
+      },
+      "references": {
+        "registry": "../../properties.yaml",
+        "brand": "brand.yaml",
+        "website": "website.yaml",
+        "seo": "seo.yaml",
+        "ota": "ota.yaml",
+        "knowledge_root": "../../../03_Knowledge",
+        "manuals_root": "../../../16_Manuals"
+      },
+      "governance": {
+        "authoritative_source": "property-owner",
+        "property_id_immutable": true,
+        "preserve_existing_data": true,
+        "preserve_historical_values": true,
+        "allow_automatic_overwrite": false,
+        "allow_automatic_deletion": false,
+        "deletion_protection": true,
+        "manual_review_required": true,
+        "validation_required_before_publish": true,
+        "unverified_claims_publish_prohibited": true,
+        "medical_claims_prohibited": true,
+        "source_attribution_required_for_external_data": true,
+        "last_verified_at": "",
+        "verified_by": ""
+      },
+      "configuration": {
+        "ssot": true,
+        "specification_version": "1.0",
+        "file_version": "4.0.0",
+        "environment": "implementation",
+        "template_compatible": true,
+        "generator_ready": true,
+        "validator_ready": true,
+        "notes": "本文件是三里田供氧客栈物业核心信息的权威配置来源。 未确认字段使用空字符串或 null，任何系统不得用推测数据覆盖。\n"
+      }
+    },
+    "brand": {
+      "brand": {
+        "property_id": "sanlitian-oxygen-guesthouse-001",
+        "property_name": "三里田供氧客栈",
+        "property_name_en": "Sanlitian Oxygen Boutique Guesthouse",
+        "brand_id": "sanlitian-oxygen-guesthouse-001-brand",
+        "brand_name": "三里田供氧客栈",
+        "brand_name_en": "Sanlitian Oxygen Boutique Guesthouse",
+        "brand_model": "independent",
+        "status": "active",
+        "enabled": true,
+        "deletion_protection": true
+      },
+      "metadata": {
+        "schema_version": "1.0",
+        "file_version": "4.0.0",
+        "created_at": "2026-08-02",
+        "updated_at": "2026-08-02",
+        "maintained_by": "HotelAIOS",
+        "source": "property-owner",
+        "verification_status": "owner-confirmed",
+        "review_required": true,
+        "default_language": "zh-CN",
+        "supported_languages": [
+          "zh-CN",
+          "en"
+        ]
+      },
+      "identity": {
+        "legal_brand": {
+          "name_zh": "云南三里田酒店管理有限公司",
+          "name_en": "Yunnan Sanlitian Hotel Management Co., Ltd."
+        },
+        "commercial_brand": {
+          "name_zh": "三里田供氧客栈",
+          "name_en": "Sanlitian Oxygen Boutique Guesthouse"
+        },
+        "short_name": {
+          "zh": "三里田",
+          "en": "Sanlitian"
+        },
+        "brand_type": "hospitality",
+        "accommodation_positioning": {
+          "zh": "丽江古城三眼井旁的供氧精品客栈",
+          "en": "An oxygen-focused boutique guesthouse beside Three-Eyed Well in Lijiang Old Town"
+        }
+      },
+      "story": {
+        "title": {
+          "zh": "三眼井畔，三里田的由来",
+          "en": "The Origin of Sanlitian"
+        },
+        "short_summary": {
+          "zh": "三里田供氧客栈坐落于丽江古城三眼井旁， 以古井、田园、清风与温暖待客文化为品牌根基， 希望为每一位旅人提供安心呼吸、舒适入眠、如家般温暖的旅居体验。\n",
+          "en": "Sanlitian Oxygen Boutique Guesthouse stands beside Three-Eyed Well in Lijiang Old Town. Its brand is rooted in the ancient well, the surrounding fields, fresh air, and warm family-style hospitality.\n"
+        },
+        "full_story_zh": "远山藏古韵，古井润人间。在山野田畔的烟火深处，静静伫立着一口百年三眼井，也藏着三里田供氧客栈温柔绵长的由来。\n\n相传古时此地山林繁茂、田亩连绵，村民依山拓田、择水而居。早年山间偶有云雾氤氲，空气潮湿沉闷，每逢雨季，行路劳作皆觉憋闷。彼时山中清泉涌动，唯独此处泉眼最为澄澈灵动，为解乡民困顿，先人寻得灵泉脉络，以青石凿造三眼井口，一眼润田、一眼养人、一眼净风。三眼井三孔同源、清泉互通，汩汩活水常年不竭，滋养着周遭良田，也涤荡着山间浊气，让这片山野常年清风流转、空气清新，四季温润通透。\n\n一方古井，养一方水土，造一方清风。这片被古井滋养的田地，便得名三里田。千百年来，三眼井的灵泉活水浸润土地、净化山林，让这里植被葱郁、负氧充盈，自成一方天然氧吧，远离尘世喧嚣，常年清风拂面、温润舒心。\n\n后来，有人择古井之畔、良田之侧，建起一座山野客栈，便取名三里田供氧客栈。\n\n取名三里田，是铭记这片良田沃土的烟火温柔，承袭三眼井千年滋养的温润底蕴；冠以供氧二字，是坚守此地独有的山野灵气，留住古井清风、山林鲜氧。不逐繁华，只守清宁，客栈依田而建、傍井而居，枕山野清风，伴古井流泉。\n\n世人奔赴山野，寻的是清净，盼的是舒心。在这里，推门可见良田阡陌，移步可访千年三眼古井，晨起吸氧听风，暮时观云赏田。一院清宁，满目青绿，一井灵泉，满室鲜氧，便是三里田供氧客栈赠予每一位旅人，最治愈的山野浪漫。\n",
+        "full_story_en": "Ancient charm rests in the distant mountains, while an old well nourishes everyday life.\n\nBeside the century-old Three-Eyed Well in Lijiang Old Town stands Sanlitian Oxygen Boutique Guesthouse. The story of Sanlitian is rooted in the fields, spring water, mountain air, and generations of local life around this place.\n\nAccording to local tradition, the area was once surrounded by forests and farmland. People settled near the water and cultivated the land. The Three-Eyed Well, carved from stone and fed by one continuous spring, became part of daily life: one opening served the fields, one served the people, and one helped keep the surroundings fresh and clean.\n\nOver time, the land nourished by this spring became known as Sanlitian. The old well, green landscape, and gentle mountain climate created a peaceful corner away from the noise of the city.\n\nThe guesthouse was later established beside the well and fields and named Sanlitian Oxygen Boutique Guesthouse. The name remembers the warmth of the land and the heritage of the Three-Eyed Well, while “oxygen” represents the property’s commitment to a more comfortable high-altitude stay.\n\nSanlitian does not pursue noise or excess. It offers a quiet courtyard, flowing spring water, greenery, fresh air, and a warm place to rest. Guests can wake to the breeze, walk to the old well, enjoy the landscape, and experience the slower rhythm of Lijiang.\n"
+      },
+      "brand_philosophy": {
+        "title": {
+          "zh": "为何在丽江做供氧客栈",
+          "en": "Why We Created an Oxygen Guesthouse in Lijiang"
+        },
+        "summary": {
+          "zh": "扎根丽江古城三眼井旁，选择做供氧客栈， 是为了回应高海拔旅行中的真实舒适需求， 并让旅人在古城核心地段拥有更安心、更温暖的旅居体验。\n",
+          "en": "Located beside Three-Eyed Well in Lijiang Old Town, Sanlitian combines local character with oxygen-supported accommodation to offer a more comfortable and reassuring high-altitude stay.\n"
+        },
+        "pillars": [
+          {
+            "pillar_id": "high-altitude-comfort",
+            "title_zh": "守护高原旅居舒适",
+            "title_en": "Supporting High-Altitude Comfort",
+            "description_zh": "丽江海拔较高，部分游客可能出现头晕、胸闷、睡眠不适等轻微高原反应。 三里田通过客房供氧配套，为旅人提供更加安心、舒适的住宿条件。\n",
+            "description_en": "Lijiang is located at high altitude, and some travelers may experience mild discomfort. Sanlitian provides in-room oxygen-related facilities to support a more comfortable stay.\n"
+          },
+          {
+            "pillar_id": "three-eyed-well-environment",
+            "title_zh": "依托三眼井自然环境",
+            "title_en": "Inspired by Three-Eyed Well",
+            "description_zh": "客栈位于三眼井片区，周边古树、流水、田园与古城街巷共同构成独特环境。\n",
+            "description_en": "The guesthouse is located in the Three-Eyed Well area, surrounded by old trees, flowing water, fields, and the lanes of Lijiang Old Town.\n"
+          },
+          {
+            "pillar_id": "better-hospitality",
+            "title_zh": "不只提供住宿，更提供安心",
+            "title_en": "More Than Accommodation",
+            "description_zh": "三里田希望客人不仅有地方住，更能安心休息、舒适入眠， 从容感受丽江古城的慢生活与在地文化。\n",
+            "description_en": "Sanlitian aims to provide more than a room: a calm place to rest, sleep well, and experience the slower rhythm of Lijiang.\n"
+          },
+          {
+            "pillar_id": "family-style-care",
+            "title_zh": "像家人一样照顾旅人",
+            "title_en": "Family-Style Hospitality",
+            "description_zh": "从年轻自由行旅客到携长辈、儿童出行的家庭， 三里田都希望以温暖、真诚、细致的方式接待每一位客人。\n",
+            "description_en": "From independent travelers to families with children or seniors, Sanlitian welcomes every guest with warmth, sincerity, and care.\n"
+          }
+        ]
+      },
+      "mission": {
+        "zh": "让每一位来到丽江的旅人，都能安心呼吸、舒适入眠，轻松感受古城最真实的慢生活。",
+        "en": "To help every traveler breathe easier, sleep better, and truly enjoy the slow rhythm of Lijiang."
+      },
+      "vision": {
+        "zh": "成为丽江古城最值得信赖、最具代表性的供氧精品客栈。",
+        "en": "To become the most trusted and representative oxygen boutique guesthouse in Lijiang Old Town."
+      },
+      "brand_promise": {
+        "zh": "在三里田，每位旅人都能拥有一个安心休息、自在呼吸、像家一样温暖的地方。",
+        "en": "At Sanlitian, every traveler can find a warm place to breathe freely, rest peacefully, and feel at home."
+      },
+      "guest_memory": {
+        "zh": "在中国云南丽江三里田，还有一个温暖的家，还有一群家人。",
+        "en": "In Sanlitian, Lijiang, there is always a warm home and a family waiting to welcome you back."
+      },
+      "slogans": {
+        "primary": {
+          "zh": "住进三里田，呼吸丽江。",
+          "en": "Stay in Sanlitian. Breathe Lijiang."
+        },
+        "alternatives": [
+          {
+            "zh": "一井清泉，一院鲜氧，一生难忘。",
+            "en": "One Ancient Well. One Courtyard. Endless Fresh Air."
+          },
+          {
+            "zh": "回到三里田，回到家的方向。",
+            "en": "Come Home to Sanlitian."
+          },
+          {
+            "zh": "让每一次呼吸，都成为旅行的一部分。",
+            "en": "Let Every Breath Become Part of Your Journey."
+          }
+        ]
+      },
+      "values": [
+        {
+          "value_id": "authenticity",
+          "name_zh": "真实",
+          "name_en": "Authenticity",
+          "description_zh": "尊重丽江文化，保持真实、可信的在地体验。",
+          "description_en": "Respect local culture and provide an authentic, trustworthy experience."
+        },
+        {
+          "value_id": "comfort",
+          "name_zh": "舒适",
+          "name_en": "Comfort",
+          "description_zh": "关注客人的睡眠、呼吸与整体旅居舒适度。",
+          "description_en": "Care for guest comfort, sleep quality, breathing, and overall well-being."
+        },
+        {
+          "value_id": "nature",
+          "name_zh": "自然",
+          "name_en": "Nature",
+          "description_zh": "珍视古井、流水、庭院、田园与山野清风。",
+          "description_en": "Value the ancient well, flowing water, courtyard, fields, and mountain air."
+        },
+        {
+          "value_id": "hospitality",
+          "name_zh": "温暖待客",
+          "name_en": "Hospitality",
+          "description_zh": "像家人一样真诚、细致地欢迎每一位旅人。",
+          "description_en": "Welcome every traveler with sincerity, warmth, and family-style care."
+        },
+        {
+          "value_id": "wellness",
+          "name_zh": "健康旅居",
+          "name_en": "Wellness",
+          "description_zh": "以非医疗方式关注高海拔旅居中的舒适与安心。",
+          "description_en": "Support comfort and reassurance during high-altitude travel without making medical claims."
+        },
+        {
+          "value_id": "local-culture",
+          "name_zh": "在地文化",
+          "name_en": "Local Culture",
+          "description_zh": "讲述三眼井、古城街巷和丽江生活方式的真实故事。",
+          "description_en": "Share authentic stories of Three-Eyed Well, Lijiang Old Town, and local life."
+        }
+      ],
+      "personality": {
+        "primary_traits": [
+          "warm",
+          "natural",
+          "elegant",
+          "authentic",
+          "caring",
+          "calm",
+          "culturally-aware"
+        ],
+        "description_zh": "品牌像一位温暖、可靠、懂丽江的家人， 说话自然、真诚、有文化感，但不过度包装。\n",
+        "description_en": "The brand speaks like a warm, reliable local host: natural, sincere, culturally aware, and never over-polished.\n"
+      },
+      "voice": {
+        "tone": {
+          "default": [
+            "warm",
+            "sincere",
+            "calm",
+            "clear",
+            "respectful"
+          ],
+          "marketing": [
+            "inviting",
+            "descriptive",
+            "trustworthy",
+            "non-aggressive"
+          ],
+          "service": [
+            "patient",
+            "reassuring",
+            "practical",
+            "caring"
+          ],
+          "ai_assistant": [
+            "factual",
+            "concise",
+            "helpful",
+            "transparent",
+            "non-medical"
+          ]
+        },
+        "preferred_words_zh": [
+          "家",
+          "清风",
+          "古井",
+          "田园",
+          "呼吸",
+          "安心",
+          "舒适",
+          "慢生活",
+          "温暖",
+          "三眼井"
+        ],
+        "preferred_words_en": [
+          "home",
+          "fresh air",
+          "ancient well",
+          "courtyard",
+          "comfort",
+          "breathe",
+          "rest",
+          "slow travel",
+          "warm hospitality"
+        ],
+        "avoid": [
+          "aggressive-sales-language",
+          "cheap-hotel-language",
+          "unsupported-superlatives",
+          "exaggerated-medical-claims",
+          "guaranteed-altitude-relief",
+          "artificial-luxury-language",
+          "keyword-stuffing"
+        ],
+        "prohibited_claims": [
+          "绝对不会高反",
+          "治疗高原反应",
+          "医疗供氧",
+          "丽江第一",
+          "丽江最好",
+          "零风险",
+          "guaranteed prevention of altitude sickness",
+          "medical oxygen treatment",
+          "best hotel in Lijiang"
+        ]
+      },
+      "audiences": {
+        "primary": [
+          {
+            "audience_id": "couples",
+            "name_zh": "情侣旅客",
+            "name_en": "Couples",
+            "needs": [
+              "安静",
+              "氛围感",
+              "古城体验",
+              "舒适睡眠"
+            ]
+          },
+          {
+            "audience_id": "families",
+            "name_zh": "家庭旅客",
+            "name_en": "Families",
+            "needs": [
+              "家庭房",
+              "长辈与儿童友好",
+              "早餐",
+              "洗衣",
+              "安心入住"
+            ]
+          },
+          {
+            "audience_id": "high-altitude-conscious-travelers",
+            "name_zh": "关注高原旅居舒适度的旅客",
+            "name_en": "High-Altitude-Conscious Travelers",
+            "needs": [
+              "供氧相关设施",
+              "清晰说明",
+              "安心休息",
+              "非医疗误导"
+            ]
+          },
+          {
+            "audience_id": "international-guests",
+            "name_zh": "国际旅客",
+            "name_en": "International Guests",
+            "needs": [
+              "英文服务",
+              "清晰交通信息",
+              "国际支付",
+              "在地文化介绍"
+            ]
+          }
+        ],
+        "secondary": [
+          "seniors",
+          "independent-travelers",
+          "small-groups",
+          "long-stay-guests",
+          "culture-focused-travelers"
+        ]
+      },
+      "positioning": {
+        "category": "oxygen-boutique-guesthouse",
+        "primary_positioning_zh": "丽江古城三眼井旁的供氧精品客栈",
+        "primary_positioning_en": "Oxygen boutique guesthouse beside Three-Eyed Well in Lijiang Old Town",
+        "differentiation": [
+          "客房供氧相关设施",
+          "三眼井在地文化",
+          "丽江古城核心步行位置",
+          "中式庭院",
+          "三眼井观景露台",
+          "传统茶室",
+          "免费中式早餐",
+          "免费洗衣与烘干",
+          "中英文服务",
+          "家庭式温暖待客"
+        ],
+        "category_claims": {
+          "allowed": [
+            "boutique-guesthouse",
+            "oxygen-focused-accommodation",
+            "old-town-accommodation",
+            "family-friendly",
+            "couple-friendly",
+            "international-guest-friendly"
+          ],
+          "prohibited": [
+            "medical-hotel",
+            "medical-treatment",
+            "guaranteed-altitude-prevention"
+          ]
+        }
+      },
+      "experience": {
+        "core_experience": {
+          "zh": "古井、庭院、鲜氧、安睡与家一般的温暖。",
+          "en": "Ancient well, courtyard, fresh air, restful sleep, and the warmth of home."
+        },
+        "sensory_identity": {
+          "visual": [
+            "古井",
+            "青石",
+            "庭院",
+            "田园",
+            "绿植",
+            "木质空间",
+            "露台"
+          ],
+          "sound": [
+            "流水",
+            "清风",
+            "安静院落"
+          ],
+          "emotion": [
+            "安心",
+            "放松",
+            "温暖",
+            "治愈",
+            "归属感"
+          ]
+        },
+        "signature_moments": [
+          "晨起在古井与庭院之间感受清风",
+          "在茶室体验慢生活",
+          "从露台眺望三眼井片区",
+          "夜间在供氧客房安心休息",
+          "与客栈团队建立家人般的连接"
+        ]
+      },
+      "visual_identity": {
+        "logo": {
+          "primary": "",
+          "secondary": "",
+          "icon": "",
+          "usage_status": "pending"
+        },
+        "colors": {
+          "primary": "",
+          "secondary": "",
+          "accent": "",
+          "neutral": "",
+          "status": "pending"
+        },
+        "typography": {
+          "chinese_primary": "",
+          "english_primary": "",
+          "status": "pending"
+        },
+        "imagery": {
+          "style": [
+            "natural-light",
+            "authentic",
+            "warm",
+            "calm",
+            "local-culture",
+            "non-staged"
+          ],
+          "required_subjects": [
+            "三眼井",
+            "客栈外观",
+            "中式庭院",
+            "观景露台",
+            "传统茶室",
+            "供氧客房",
+            "早餐",
+            "客栈团队"
+          ],
+          "avoid": [
+            "misleading-room-images",
+            "over-edited-sky",
+            "fake-luxury-scenes",
+            "unrelated-stock-photos"
+          ]
+        }
+      },
+      "messaging": {
+        "elevator_pitch": {
+          "zh": "三里田供氧客栈位于丽江古城三眼井旁， 提供供氧客房、中式庭院、观景露台、传统茶室、 免费中式早餐、免费洗衣及中英文服务， 希望让旅人在丽江安心呼吸、舒适入眠、像回家一样温暖。\n",
+          "en": "Sanlitian Oxygen Boutique Guesthouse is located beside Three-Eyed Well in Lijiang Old Town, offering oxygen-equipped rooms, a traditional courtyard, viewing terrace, tea room, complimentary Chinese breakfast, laundry facilities, and bilingual service.\n"
+        },
+        "short_description": {
+          "zh": "丽江古城三眼井旁，关注呼吸、睡眠与温暖待客体验的供氧精品客栈。",
+          "en": "An oxygen-focused boutique guesthouse beside Three-Eyed Well in Lijiang Old Town."
+        },
+        "key_messages": [
+          "三眼井旁的在地客栈",
+          "供氧客房与高原旅居舒适",
+          "古城核心位置",
+          "家一般的温暖",
+          "中式庭院与茶文化",
+          "适合情侣、家庭与国际旅客"
+        ]
+      },
+      "content_guidelines": {
+        "factual_accuracy_required": true,
+        "owner_review_required": true,
+        "medical_claims_prohibited": true,
+        "unsupported_superlatives_prohibited": true,
+        "preserve_brand_story": true,
+        "preserve_guest_memory": true,
+        "local_culture_respect_required": true,
+        "translation_review_required": true,
+        "generated_content_must_reference": [
+          "mission",
+          "values",
+          "voice",
+          "positioning",
+          "messaging"
+        ],
+        "content_types": {
+          "website": {
+            "tone": "warm-and-authoritative"
+          },
+          "ota": {
+            "tone": "clear-and-conversion-focused"
+          },
+          "seo": {
+            "tone": "factual-and-search-friendly"
+          },
+          "social": {
+            "tone": "warm-and-story-driven"
+          },
+          "ai_assistant": {
+            "tone": "concise-transparent-and-helpful"
+          },
+          "manuals": {
+            "tone": "professional-and-instructional"
+          }
+        }
+      },
+      "ai_brand_profile": {
+        "enabled": true,
+        "brand_entity_ready": true,
+        "multilingual_ready": true,
+        "retrieval_ready": true,
+        "rag_ready": true,
+        "prompt_ready": true,
+        "entity_name_zh": "三里田供氧客栈",
+        "entity_name_en": "Sanlitian Oxygen Boutique Guesthouse",
+        "canonical_summary_zh": "三里田供氧客栈是一家位于中国云南丽江古城三眼井旁的精品供氧客栈， 以供氧客房、三眼井文化、中式庭院、观景露台、传统茶室和温暖家庭式服务为核心特色。\n",
+        "canonical_summary_en": "Sanlitian Oxygen Boutique Guesthouse is an oxygen-focused boutique guesthouse beside Three-Eyed Well in Lijiang Old Town, known for its oxygen-equipped rooms, local cultural setting, traditional courtyard, viewing terrace, tea room, and warm family-style hospitality.\n",
+        "ai_response_rules": [
+          "不得将供氧设施描述为医疗服务",
+          "不得承诺防止或治疗高原反应",
+          "不得虚构评分、奖项或平台排名",
+          "不得虚构尚未确认的酒店设施",
+          "品牌故事与传说性内容应明确作为品牌叙事表达",
+          "对未知信息应明确说明尚待确认"
+        ],
+        "prompt_context": {
+          "brand_voice": "warm-natural-authentic",
+          "brand_goal": "build-trust-and-help-travelers",
+          "primary_language": "zh-CN",
+          "secondary_language": "en"
+        }
+      },
+      "governance": {
+        "authoritative_source": "property-owner",
+        "brand_story_is_ssot": true,
+        "mission_is_ssot": true,
+        "vision_is_ssot": true,
+        "values_are_ssot": true,
+        "slogan_is_ssot": true,
+        "preserve_existing_brand_assets": true,
+        "allow_automatic_overwrite": false,
+        "allow_automatic_deletion": false,
+        "deletion_protection": true,
+        "manual_review_required": true,
+        "change_log_required": true,
+        "validation_required_before_publish": true,
+        "last_verified_at": "2026-08-02",
+        "verified_by": "property-owner"
+      },
+      "references": {
+        "registry": "../../properties.yaml",
+        "hotel": "hotel.yaml",
+        "website": "website.yaml",
+        "seo": "seo.yaml",
+        "ota": "ota.yaml",
+        "knowledge_root": "../../../03_Knowledge",
+        "manuals_root": "../../../16_Manuals"
+      },
+      "configuration": {
+        "ssot": true,
+        "specification_version": "1.0",
+        "file_version": "4.0.0",
+        "environment": "implementation",
+        "template_compatible": true,
+        "generator_ready": true,
+        "validator_ready": true,
+        "notes": "本文件是三里田供氧客栈品牌身份、品牌故事、使命、愿景、 价值观、品牌语气、目标客群和品牌表达规范的权威配置来源。 酒店地址、联系方式、房型、设施与运营信息由 hotel.yaml 管理， 本文件不得重复维护这些业务数据。\n"
+      }
+    },
+    "website": {
+      "website": {
+        "property_id": "sanlitian-oxygen-guesthouse-001",
+        "site_id": "sanlitian-official",
+        "site_name": "Sanlitian Oxygen Boutique Guesthouse",
+        "enabled": true,
+        "default_language": "zh-CN",
+        "supported_languages": [
+          "zh-CN",
+          "en"
+        ]
+      },
+      "metadata": {
+        "schema_version": "1.0",
+        "file_version": "4.0.0",
+        "created_at": "2026-08-02",
+        "updated_at": "2026-08-02",
+        "maintained_by": "HotelAIOS",
+        "source": "property-owner"
+      },
+      "deployment": {
+        "environment": "production",
+        "domain": {
+          "primary": "",
+          "status": "coming-soon"
+        },
+        "ssl": {
+          "enabled": true,
+          "provider": ""
+        },
+        "cdn": {
+          "enabled": false
+        }
+      },
+      "branding": {
+        "logo": "",
+        "favicon": "",
+        "theme": {
+          "style": "natural",
+          "primary_color": "",
+          "secondary_color": "",
+          "accent_color": ""
+        }
+      },
+      "navigation": {
+        "header": [
+          {
+            "id": "home",
+            "zh": "首页",
+            "en": "Home"
+          },
+          {
+            "id": "rooms",
+            "zh": "客房",
+            "en": "Rooms"
+          },
+          {
+            "id": "facilities",
+            "zh": "设施",
+            "en": "Facilities"
+          },
+          {
+            "id": "story",
+            "zh": "品牌故事",
+            "en": "Story"
+          },
+          {
+            "id": "location",
+            "zh": "位置",
+            "en": "Location"
+          },
+          {
+            "id": "contact",
+            "zh": "联系我们",
+            "en": "Contact"
+          }
+        ]
+      },
+      "homepage": {
+        "hero": {
+          "enabled": true,
+          "title_source": "brand.yaml:slogans.primary",
+          "description_source": "brand.yaml:messaging.short_description",
+          "cover_image": "",
+          "primary_cta": {
+            "zh": "立即预订",
+            "en": "Book Now"
+          },
+          "secondary_cta": {
+            "zh": "联系我们",
+            "en": "Contact Us"
+          }
+        },
+        "sections": [
+          "hero",
+          "brand-story",
+          "room-types",
+          "facilities",
+          "breakfast",
+          "nearby-attractions",
+          "location",
+          "contact"
+        ]
+      },
+      "pages": {
+        "home": true,
+        "rooms": true,
+        "facilities": true,
+        "story": true,
+        "location": true,
+        "contact": true,
+        "privacy": true,
+        "terms": true
+      },
+      "footer": {
+        "show_contact": true,
+        "show_address": true,
+        "show_copyright": true,
+        "copyright": "© Sanlitian Oxygen Boutique Guesthouse"
+      },
+      "booking": {
+        "enabled": false,
+        "booking_engine": "",
+        "reservation_email_source": "hotel.yaml:contact.email.primary",
+        "reservation_phone_source": "hotel.yaml:contact.phone.primary"
+      },
+      "social": {
+        "wechat": "",
+        "whatsapp": "hotel.yaml:contact.whatsapp.number",
+        "facebook": "",
+        "instagram": "",
+        "x": "",
+        "youtube": ""
+      },
+      "analytics": {
+        "google_analytics": "",
+        "google_tag_manager": "",
+        "microsoft_clarity": ""
+      },
+      "seo": {
+        "configuration_source": "seo.yaml"
+      },
+      "references": {
+        "hotel": "hotel.yaml",
+        "brand": "brand.yaml",
+        "seo": "seo.yaml",
+        "ota": "ota.yaml"
+      },
+      "governance": {
+        "ssot": true,
+        "allow_automatic_overwrite": false,
+        "manual_review_required": true,
+        "validation_required_before_publish": true
+      },
+      "configuration": {
+        "generator_ready": true,
+        "validator_ready": true,
+        "template_compatible": true,
+        "notes": "网站配置仅负责网站结构、导航、部署和页面配置。 酒店信息引用 hotel.yaml，品牌内容引用 brand.yaml， SEO 内容引用 seo.yaml，不重复维护业务数据。\n"
+      }
+    },
+    "seo": {
+      "seo": {
+        "property_id": "sanlitian-oxygen-guesthouse-001",
+        "enabled": true,
+        "default_language": "zh-CN",
+        "supported_languages": [
+          "zh-CN",
+          "en"
+        ]
+      },
+      "metadata": {
+        "schema_version": "1.0",
+        "file_version": "4.0.0",
+        "created_at": "2026-08-02",
+        "updated_at": "2026-08-02",
+        "maintained_by": "HotelAIOS",
+        "source": "property-owner"
+      },
+      "site": {
+        "canonical_url": "",
+        "robots": "index,follow",
+        "sitemap": "/sitemap.xml"
+      },
+      "meta": {
+        "homepage": {
+          "title": {
+            "zh": "三里田供氧客栈｜丽江古城三眼井旁供氧精品客栈",
+            "en": "Sanlitian Oxygen Boutique Guesthouse | Oxygen Boutique Guesthouse in Lijiang Old Town"
+          },
+          "description": {
+            "zh": "三里田供氧客栈位于丽江古城三眼井旁，提供供氧客房、免费中式早餐、传统庭院、观景露台、茶室及中英文服务。",
+            "en": "Stay beside Three-Eyed Well in Lijiang Old Town with oxygen-equipped rooms, complimentary breakfast, courtyard, tea room and warm hospitality."
+          },
+          "keywords": {
+            "zh": [
+              "丽江供氧客栈",
+              "丽江古城客栈",
+              "三眼井客栈",
+              "丽江住宿",
+              "丽江精品客栈"
+            ],
+            "en": [
+              "Lijiang guesthouse",
+              "oxygen guesthouse",
+              "Lijiang Old Town hotel",
+              "Three-Eyed Well",
+              "boutique guesthouse"
+            ]
+          }
+        }
+      },
+      "open_graph": {
+        "type": "website",
+        "site_name": "Sanlitian Oxygen Boutique Guesthouse",
+        "locale": "zh_CN",
+        "image": ""
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "site": "",
+        "creator": ""
+      },
+      "structured_data": {
+        "type": "LodgingBusiness",
+        "name_source": "hotel.yaml:property.property_name_en",
+        "address_source": "hotel.yaml:location.full_address.en",
+        "phone_source": "hotel.yaml:contact.phone.primary",
+        "image": "",
+        "price_range": "",
+        "geo_source": "hotel.yaml:location.coordinates"
+      },
+      "ai_search": {
+        "enabled": true,
+        "summary_source": "brand.yaml:ai_brand_profile.canonical_summary_en",
+        "preferred_topics": [
+          "oxygen accommodation",
+          "Lijiang Old Town",
+          "Three-Eyed Well",
+          "boutique guesthouse"
+        ],
+        "factual_only": true,
+        "prohibit_unverified_claims": true
+      },
+      "references": {
+        "hotel": "hotel.yaml",
+        "brand": "brand.yaml",
+        "website": "website.yaml",
+        "ota": "ota.yaml"
+      },
+      "governance": {
+        "ssot": true,
+        "manual_review_required": true,
+        "validation_required_before_publish": true,
+        "preserve_fact_accuracy": true,
+        "prohibit_keyword_stuffing": true
+      },
+      "configuration": {
+        "generator_ready": true,
+        "validator_ready": true,
+        "template_compatible": true,
+        "notes": "SEO 配置仅维护搜索引擎和 AI 检索相关配置， 酒店基础信息引用 hotel.yaml， 品牌内容引用 brand.yaml， 不重复维护业务数据。\n"
+      }
+    },
+    "ota": {
+      "ota": {
+        "property_id": "sanlitian-oxygen-guesthouse-001",
+        "enabled": true,
+        "default_language": "zh-CN",
+        "supported_languages": [
+          "zh-CN",
+          "en"
+        ]
+      },
+      "metadata": {
+        "schema_version": "1.0",
+        "file_version": "4.0.0",
+        "created_at": "2026-08-02",
+        "updated_at": "2026-08-02",
+        "maintained_by": "HotelAIOS",
+        "source": "property-owner"
+      },
+      "distribution": {
+        "strategy": "direct-and-ota",
+        "channel_manager": "",
+        "synchronization": {
+          "inventory": true,
+          "rates": true,
+          "restrictions": true,
+          "content": "manual"
+        }
+      },
+      "channels": {
+        "booking": {
+          "enabled": false,
+          "property_id": "",
+          "status": "draft"
+        },
+        "agoda": {
+          "enabled": false,
+          "property_id": "",
+          "status": "draft"
+        },
+        "expedia": {
+          "enabled": false,
+          "property_id": "",
+          "status": "draft"
+        },
+        "trip": {
+          "enabled": false,
+          "property_id": "",
+          "status": "draft"
+        },
+        "airbnb": {
+          "enabled": false,
+          "property_id": "",
+          "status": "draft"
+        },
+        "google_hotels": {
+          "enabled": false,
+          "property_id": "",
+          "status": "draft"
+        }
+      },
+      "room_mapping": [
+        {
+          "local_room_id": "king-room",
+          "local_name": "King Room",
+          "booking_name": "",
+          "agoda_name": "",
+          "expedia_name": "",
+          "trip_name": "",
+          "airbnb_name": ""
+        },
+        {
+          "local_room_id": "twin-room",
+          "local_name": "Twin Room",
+          "booking_name": "",
+          "agoda_name": "",
+          "expedia_name": "",
+          "trip_name": "",
+          "airbnb_name": ""
+        },
+        {
+          "local_room_id": "family-room",
+          "local_name": "Family Room",
+          "booking_name": "",
+          "agoda_name": "",
+          "expedia_name": "",
+          "trip_name": "",
+          "airbnb_name": ""
+        },
+        {
+          "local_room_id": "loft-family-room",
+          "local_name": "Loft Family Room",
+          "booking_name": "",
+          "agoda_name": "",
+          "expedia_name": "",
+          "trip_name": "",
+          "airbnb_name": ""
+        },
+        {
+          "local_room_id": "private-villa",
+          "local_name": "Private Villa",
+          "booking_name": "",
+          "agoda_name": "",
+          "expedia_name": "",
+          "trip_name": "",
+          "airbnb_name": ""
+        }
+      ],
+      "content_sources": {
+        "property_name": "hotel.yaml:property.property_name_en",
+        "short_description": "brand.yaml:messaging.short_description",
+        "long_description": "brand.yaml:story.short_summary",
+        "brand_story": "brand.yaml:story.full_story_en",
+        "facilities": "hotel.yaml:facilities",
+        "breakfast": "hotel.yaml:breakfast",
+        "contact": "hotel.yaml:contact",
+        "location": "hotel.yaml:location"
+      },
+      "images": {
+        "cover": "",
+        "exterior": [],
+        "rooms": [],
+        "facilities": [],
+        "breakfast": [],
+        "nearby": [],
+        "gallery_limit": null
+      },
+      "policies": {
+        "check_in_source": "hotel.yaml:operations.check_in.standard_time",
+        "check_out_source": "hotel.yaml:operations.check_out.standard_time",
+        "cancellation_policy": "",
+        "children_policy": "",
+        "pet_policy": "",
+        "smoking_policy": "",
+        "payment_source": "hotel.yaml:payments"
+      },
+      "compliance": {
+        "prohibit_medical_claims": true,
+        "require_fact_based_content": true,
+        "allow_oxygen_description": true,
+        "oxygen_description_rule": "Describe oxygen-related facilities as a comfort feature only. Do not state or imply diagnosis, treatment, prevention, or cure of altitude sickness.\n",
+        "prohibited_claims": [
+          "medical oxygen treatment",
+          "guaranteed prevention of altitude sickness",
+          "cure altitude sickness",
+          "best hotel in Lijiang"
+        ]
+      },
+      "publishing": {
+        "auto_publish": false,
+        "manual_review_required": true,
+        "content_review_required": true,
+        "image_review_required": true
+      },
+      "references": {
+        "hotel": "hotel.yaml",
+        "brand": "brand.yaml",
+        "website": "website.yaml",
+        "seo": "seo.yaml"
+      },
+      "governance": {
+        "ssot": true,
+        "allow_automatic_overwrite": false,
+        "allow_automatic_deletion": false,
+        "validation_required_before_publish": true,
+        "preserve_channel_ids": true
+      },
+      "configuration": {
+        "generator_ready": true,
+        "validator_ready": true,
+        "template_compatible": true,
+        "notes": "OTA 配置负责渠道映射、发布状态和 OTA 专属策略。 酒店、品牌、SEO 信息均引用对应配置文件，不重复维护。\n"
+      }
+    }
+  }
+}
