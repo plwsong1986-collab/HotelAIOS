@@ -1,0 +1,98 @@
+[project]
+name = "hotelaios"
+version = "2.0.0"
+description = "AIGOS / HotelAIOS - Open-source AI Growth Operating System for hotels, inns, homestays and accommodation businesses."
+readme = "README.md"
+requires-python = ">=3.12,<3.15"
+license = { text = "MIT" }
+authors = [
+    { name = "HotelAIOS Project" }
+]
+
+dependencies = [
+    "jsonschema>=4.26.0",
+    "pyyaml>=6.0.3,<7.0.0",
+]
+
+[project.optional-dependencies]
+development = [
+    "ruff>=0.12.0",
+    "pytest>=8.0.0",
+    "mypy>=1.10.0",
+]
+
+documents = [
+    "python-docx>=1.1.0",
+    "python-pptx>=1.0.0",
+    "reportlab>=4.0.0",
+    "markdown>=3.6",
+]
+
+automation = [
+    "jinja2>=3.1.0",
+    "jsonschema>=4.22.0",
+    "requests>=2.32.0",
+]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+exclude = [
+    ".git",
+    ".github",
+    ".venv",
+    "public",
+    "build",
+    "dist",
+    "output",
+    "99_Archive",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "UP",
+    "B",
+    "SIM",
+]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
+python_files = [
+    "test_*.py",
+]
+addopts = "-ra"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unused_configs = true
+exclude = [
+    "^\\.venv/",
+    "^99_Archive/",
+]
+
+[tool.hotelaios]
+project_name = "HotelAIOS"
+product_name = "AIGOS"
+implementation_version = "2.0"
+default_language = "zh-CN"
+default_timezone = "Asia/Shanghai"
+configuration_root = "17_Config"
+automation_root = "19_Automation"
+manuals_root = "16_Manuals"
+knowledge_root = "03_Knowledge"
+website_root = "04_Website"

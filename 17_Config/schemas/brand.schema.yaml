@@ -1,0 +1,890 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://hotelaios.local/schemas/brand.schema.yaml
+title: HotelAIOS Brand Schema
+type: object
+additionalProperties: false
+properties:
+  brand:
+    type: object
+    additionalProperties: false
+    properties:
+      property_id:
+        type: string
+      property_name:
+        type: string
+      property_name_en:
+        type: string
+      brand_id:
+        type: string
+      brand_name:
+        type: string
+      brand_name_en:
+        type: string
+      brand_model:
+        type: string
+      status:
+        type: string
+      enabled:
+        type: boolean
+      deletion_protection:
+        type: boolean
+    required:
+      - property_id
+      - property_name
+      - property_name_en
+      - brand_id
+      - brand_name
+      - brand_name_en
+      - brand_model
+      - status
+      - enabled
+      - deletion_protection
+  metadata:
+    type: object
+    additionalProperties: false
+    properties:
+      schema_version:
+        type: string
+      file_version:
+        type: string
+      created_at:
+        type: string
+      updated_at:
+        type: string
+      maintained_by:
+        type: string
+      source:
+        type: string
+      verification_status:
+        type: string
+      review_required:
+        type: boolean
+      default_language:
+        type: string
+      supported_languages:
+        type: array
+        items:
+          type: string
+    required:
+      - schema_version
+      - file_version
+      - created_at
+      - updated_at
+      - maintained_by
+      - source
+      - verification_status
+      - review_required
+      - default_language
+      - supported_languages
+  identity:
+    type: object
+    additionalProperties: false
+    properties:
+      legal_brand:
+        type: object
+        additionalProperties: false
+        properties:
+          name_zh:
+            type: string
+          name_en:
+            type: string
+        required:
+          - name_zh
+          - name_en
+      commercial_brand:
+        type: object
+        additionalProperties: false
+        properties:
+          name_zh:
+            type: string
+          name_en:
+            type: string
+        required:
+          - name_zh
+          - name_en
+      short_name:
+        type: object
+        additionalProperties: false
+        properties:
+          zh:
+            type: string
+          en:
+            type: string
+        required:
+          - zh
+          - en
+      brand_type:
+        type: string
+      accommodation_positioning:
+        type: object
+        additionalProperties: false
+        properties:
+          zh:
+            type: string
+          en:
+            type: string
+        required:
+          - zh
+          - en
+    required:
+      - legal_brand
+      - commercial_brand
+      - short_name
+      - brand_type
+      - accommodation_positioning
+  story:
+    type: object
+    additionalProperties: false
+    properties:
+      title:
+        type: object
+        additionalProperties: false
+        properties:
+          zh:
+            type: string
+          en:
+            type: string
+        required:
+          - zh
+          - en
+      short_summary:
+        type: object
+        additionalProperties: false
+        properties:
+          zh:
+            type: string
+          en:
+            type: string
+        required:
+          - zh
+          - en
+      full_story_zh:
+        type: string
+      full_story_en:
+        type: string
+    required:
+      - title
+      - short_summary
+      - full_story_zh
+      - full_story_en
+  brand_philosophy:
+    type: object
+    additionalProperties: false
+    properties:
+      title:
+        type: object
+        additionalProperties: false
+        properties:
+          zh:
+            type: string
+          en:
+            type: string
+        required:
+          - zh
+          - en
+      summary:
+        type: object
+        additionalProperties: false
+        properties:
+          zh:
+            type: string
+          en:
+            type: string
+        required:
+          - zh
+          - en
+      pillars:
+        type: array
+        items:
+          type: object
+          additionalProperties: false
+          properties:
+            pillar_id:
+              type: string
+            title_zh:
+              type: string
+            title_en:
+              type: string
+            description_zh:
+              type: string
+            description_en:
+              type: string
+          required:
+            - pillar_id
+            - title_zh
+            - title_en
+            - description_zh
+            - description_en
+    required:
+      - title
+      - summary
+      - pillars
+  mission:
+    type: object
+    additionalProperties: false
+    properties:
+      zh:
+        type: string
+      en:
+        type: string
+    required:
+      - zh
+      - en
+  vision:
+    type: object
+    additionalProperties: false
+    properties:
+      zh:
+        type: string
+      en:
+        type: string
+    required:
+      - zh
+      - en
+  brand_promise:
+    type: object
+    additionalProperties: false
+    properties:
+      zh:
+        type: string
+      en:
+        type: string
+    required:
+      - zh
+      - en
+  guest_memory:
+    type: object
+    additionalProperties: false
+    properties:
+      zh:
+        type: string
+      en:
+        type: string
+    required:
+      - zh
+      - en
+  slogans:
+    type: object
+    additionalProperties: false
+    properties:
+      primary:
+        type: object
+        additionalProperties: false
+        properties:
+          zh:
+            type: string
+          en:
+            type: string
+        required:
+          - zh
+          - en
+      alternatives:
+        type: array
+        items:
+          type: object
+          additionalProperties: false
+          properties:
+            zh:
+              type: string
+            en:
+              type: string
+          required:
+            - zh
+            - en
+    required:
+      - primary
+      - alternatives
+  values:
+    type: array
+    items:
+      type: object
+      additionalProperties: false
+      properties:
+        value_id:
+          type: string
+        name_zh:
+          type: string
+        name_en:
+          type: string
+        description_zh:
+          type: string
+        description_en:
+          type: string
+      required:
+        - value_id
+        - name_zh
+        - name_en
+        - description_zh
+        - description_en
+  personality:
+    type: object
+    additionalProperties: false
+    properties:
+      primary_traits:
+        type: array
+        items:
+          type: string
+      description_zh:
+        type: string
+      description_en:
+        type: string
+    required:
+      - primary_traits
+      - description_zh
+      - description_en
+  voice:
+    type: object
+    additionalProperties: false
+    properties:
+      tone:
+        type: object
+        additionalProperties: false
+        properties:
+          default:
+            type: array
+            items:
+              type: string
+          marketing:
+            type: array
+            items:
+              type: string
+          service:
+            type: array
+            items:
+              type: string
+          ai_assistant:
+            type: array
+            items:
+              type: string
+        required:
+          - default
+          - marketing
+          - service
+          - ai_assistant
+      preferred_words_zh:
+        type: array
+        items:
+          type: string
+      preferred_words_en:
+        type: array
+        items:
+          type: string
+      avoid:
+        type: array
+        items:
+          type: string
+      prohibited_claims:
+        type: array
+        items:
+          type: string
+    required:
+      - tone
+      - preferred_words_zh
+      - preferred_words_en
+      - avoid
+      - prohibited_claims
+  audiences:
+    type: object
+    additionalProperties: false
+    properties:
+      primary:
+        type: array
+        items:
+          type: object
+          additionalProperties: false
+          properties:
+            audience_id:
+              type: string
+            name_zh:
+              type: string
+            name_en:
+              type: string
+            needs:
+              type: array
+              items:
+                type: string
+          required:
+            - audience_id
+            - name_zh
+            - name_en
+            - needs
+      secondary:
+        type: array
+        items:
+          type: string
+    required:
+      - primary
+      - secondary
+  positioning:
+    type: object
+    additionalProperties: false
+    properties:
+      category:
+        type: string
+      primary_positioning_zh:
+        type: string
+      primary_positioning_en:
+        type: string
+      differentiation:
+        type: array
+        items:
+          type: string
+      category_claims:
+        type: object
+        additionalProperties: false
+        properties:
+          allowed:
+            type: array
+            items:
+              type: string
+          prohibited:
+            type: array
+            items:
+              type: string
+        required:
+          - allowed
+          - prohibited
+    required:
+      - category
+      - primary_positioning_zh
+      - primary_positioning_en
+      - differentiation
+      - category_claims
+  experience:
+    type: object
+    additionalProperties: false
+    properties:
+      core_experience:
+        type: object
+        additionalProperties: false
+        properties:
+          zh:
+            type: string
+          en:
+            type: string
+        required:
+          - zh
+          - en
+      sensory_identity:
+        type: object
+        additionalProperties: false
+        properties:
+          visual:
+            type: array
+            items:
+              type: string
+          sound:
+            type: array
+            items:
+              type: string
+          emotion:
+            type: array
+            items:
+              type: string
+        required:
+          - visual
+          - sound
+          - emotion
+      signature_moments:
+        type: array
+        items:
+          type: string
+    required:
+      - core_experience
+      - sensory_identity
+      - signature_moments
+  visual_identity:
+    type: object
+    additionalProperties: false
+    properties:
+      logo:
+        type: object
+        additionalProperties: false
+        properties:
+          primary:
+            type: string
+          secondary:
+            type: string
+          icon:
+            type: string
+          usage_status:
+            type: string
+        required:
+          - primary
+          - secondary
+          - icon
+          - usage_status
+      colors:
+        type: object
+        additionalProperties: false
+        properties:
+          primary:
+            type: string
+          secondary:
+            type: string
+          accent:
+            type: string
+          neutral:
+            type: string
+          status:
+            type: string
+        required:
+          - primary
+          - secondary
+          - accent
+          - neutral
+          - status
+      typography:
+        type: object
+        additionalProperties: false
+        properties:
+          chinese_primary:
+            type: string
+          english_primary:
+            type: string
+          status:
+            type: string
+        required:
+          - chinese_primary
+          - english_primary
+          - status
+      imagery:
+        type: object
+        additionalProperties: false
+        properties:
+          style:
+            type: array
+            items:
+              type: string
+          required_subjects:
+            type: array
+            items:
+              type: string
+          avoid:
+            type: array
+            items:
+              type: string
+        required:
+          - style
+          - required_subjects
+          - avoid
+    required:
+      - logo
+      - colors
+      - typography
+      - imagery
+  messaging:
+    type: object
+    additionalProperties: false
+    properties:
+      elevator_pitch:
+        type: object
+        additionalProperties: false
+        properties:
+          zh:
+            type: string
+          en:
+            type: string
+        required:
+          - zh
+          - en
+      short_description:
+        type: object
+        additionalProperties: false
+        properties:
+          zh:
+            type: string
+          en:
+            type: string
+        required:
+          - zh
+          - en
+      key_messages:
+        type: array
+        items:
+          type: string
+    required:
+      - elevator_pitch
+      - short_description
+      - key_messages
+  content_guidelines:
+    type: object
+    additionalProperties: false
+    properties:
+      factual_accuracy_required:
+        type: boolean
+      owner_review_required:
+        type: boolean
+      medical_claims_prohibited:
+        type: boolean
+      unsupported_superlatives_prohibited:
+        type: boolean
+      preserve_brand_story:
+        type: boolean
+      preserve_guest_memory:
+        type: boolean
+      local_culture_respect_required:
+        type: boolean
+      translation_review_required:
+        type: boolean
+      generated_content_must_reference:
+        type: array
+        items:
+          type: string
+      content_types:
+        type: object
+        additionalProperties: false
+        properties:
+          website:
+            type: object
+            additionalProperties: false
+            properties:
+              tone:
+                type: string
+            required:
+              - tone
+          ota:
+            type: object
+            additionalProperties: false
+            properties:
+              tone:
+                type: string
+            required:
+              - tone
+          seo:
+            type: object
+            additionalProperties: false
+            properties:
+              tone:
+                type: string
+            required:
+              - tone
+          social:
+            type: object
+            additionalProperties: false
+            properties:
+              tone:
+                type: string
+            required:
+              - tone
+          ai_assistant:
+            type: object
+            additionalProperties: false
+            properties:
+              tone:
+                type: string
+            required:
+              - tone
+          manuals:
+            type: object
+            additionalProperties: false
+            properties:
+              tone:
+                type: string
+            required:
+              - tone
+        required:
+          - website
+          - ota
+          - seo
+          - social
+          - ai_assistant
+          - manuals
+    required:
+      - factual_accuracy_required
+      - owner_review_required
+      - medical_claims_prohibited
+      - unsupported_superlatives_prohibited
+      - preserve_brand_story
+      - preserve_guest_memory
+      - local_culture_respect_required
+      - translation_review_required
+      - generated_content_must_reference
+      - content_types
+  ai_brand_profile:
+    type: object
+    additionalProperties: false
+    properties:
+      enabled:
+        type: boolean
+      brand_entity_ready:
+        type: boolean
+      multilingual_ready:
+        type: boolean
+      retrieval_ready:
+        type: boolean
+      rag_ready:
+        type: boolean
+      prompt_ready:
+        type: boolean
+      entity_name_zh:
+        type: string
+      entity_name_en:
+        type: string
+      canonical_summary_zh:
+        type: string
+      canonical_summary_en:
+        type: string
+      ai_response_rules:
+        type: array
+        items:
+          type: string
+      prompt_context:
+        type: object
+        additionalProperties: false
+        properties:
+          brand_voice:
+            type: string
+          brand_goal:
+            type: string
+          primary_language:
+            type: string
+          secondary_language:
+            type: string
+        required:
+          - brand_voice
+          - brand_goal
+          - primary_language
+          - secondary_language
+    required:
+      - enabled
+      - brand_entity_ready
+      - multilingual_ready
+      - retrieval_ready
+      - rag_ready
+      - prompt_ready
+      - entity_name_zh
+      - entity_name_en
+      - canonical_summary_zh
+      - canonical_summary_en
+      - ai_response_rules
+      - prompt_context
+  governance:
+    type: object
+    additionalProperties: false
+    properties:
+      authoritative_source:
+        type: string
+      brand_story_is_ssot:
+        type: boolean
+      mission_is_ssot:
+        type: boolean
+      vision_is_ssot:
+        type: boolean
+      values_are_ssot:
+        type: boolean
+      slogan_is_ssot:
+        type: boolean
+      preserve_existing_brand_assets:
+        type: boolean
+      allow_automatic_overwrite:
+        type: boolean
+      allow_automatic_deletion:
+        type: boolean
+      deletion_protection:
+        type: boolean
+      manual_review_required:
+        type: boolean
+      change_log_required:
+        type: boolean
+      validation_required_before_publish:
+        type: boolean
+      last_verified_at:
+        type: string
+      verified_by:
+        type: string
+    required:
+      - authoritative_source
+      - brand_story_is_ssot
+      - mission_is_ssot
+      - vision_is_ssot
+      - values_are_ssot
+      - slogan_is_ssot
+      - preserve_existing_brand_assets
+      - allow_automatic_overwrite
+      - allow_automatic_deletion
+      - deletion_protection
+      - manual_review_required
+      - change_log_required
+      - validation_required_before_publish
+      - last_verified_at
+      - verified_by
+  references:
+    type: object
+    additionalProperties: false
+    properties:
+      registry:
+        type: string
+      hotel:
+        type: string
+      website:
+        type: string
+      seo:
+        type: string
+      ota:
+        type: string
+      knowledge_root:
+        type: string
+      manuals_root:
+        type: string
+    required:
+      - registry
+      - hotel
+      - website
+      - seo
+      - ota
+      - knowledge_root
+      - manuals_root
+  configuration:
+    type: object
+    additionalProperties: false
+    properties:
+      ssot:
+        type: boolean
+      specification_version:
+        type: string
+      file_version:
+        type: string
+      environment:
+        type: string
+      template_compatible:
+        type: boolean
+      generator_ready:
+        type: boolean
+      validator_ready:
+        type: boolean
+      notes:
+        type: string
+    required:
+      - ssot
+      - specification_version
+      - file_version
+      - environment
+      - template_compatible
+      - generator_ready
+      - validator_ready
+      - notes
+required:
+  - brand
+  - metadata
+  - identity
+  - story
+  - brand_philosophy
+  - mission
+  - vision
+  - brand_promise
+  - guest_memory
+  - slogans
+  - values
+  - personality
+  - voice
+  - audiences
+  - positioning
+  - experience
+  - visual_identity
+  - messaging
+  - content_guidelines
+  - ai_brand_profile
+  - governance
+  - references
+  - configuration

@@ -1,0 +1,450 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: HotelAIOS Property Registry Schema
+type: object
+additionalProperties: false
+required:
+  - version
+  - registry
+  - defaults
+  - publishing
+  - validation
+  - required_property_files
+  - supported_statuses
+  - supported_property_types
+  - properties
+  - governance
+  - configuration
+properties:
+  version:
+    type: string
+  registry:
+    type: object
+    additionalProperties: false
+    required:
+      - name
+      - description
+      - schema_version
+      - default_property_id
+      - preservation_policy
+      - deletion_policy
+      - default_deletion_protection
+      - allow_automatic_deletion
+      - allow_bulk_deletion
+      - allow_property_id_reuse
+      - preserve_inactive_properties
+      - preserve_archived_properties
+      - created_at
+      - updated_at
+    properties:
+      name:
+        type: string
+      description:
+        type: string
+      schema_version:
+        type: string
+      default_property_id:
+        type: string
+      preservation_policy:
+        type: string
+      deletion_policy:
+        type: string
+      default_deletion_protection:
+        type: boolean
+      allow_automatic_deletion:
+        type: boolean
+      allow_bulk_deletion:
+        type: boolean
+      allow_property_id_reuse:
+        type: boolean
+      preserve_inactive_properties:
+        type: boolean
+      preserve_archived_properties:
+        type: boolean
+      created_at:
+        type: string
+      updated_at:
+        type: string
+  defaults:
+    type: object
+    additionalProperties: false
+    required:
+      - status
+      - enabled
+      - deletion_protection
+      - public_visibility
+      - website_enabled
+      - ai_enabled
+      - ota_enabled
+      - knowledge_enabled
+      - crm_enabled
+      - analytics_enabled
+      - deployment_enabled
+      - default_language
+      - timezone
+    properties:
+      status:
+        type: string
+      enabled:
+        type: boolean
+      deletion_protection:
+        type: boolean
+      public_visibility:
+        type: string
+      website_enabled:
+        type: boolean
+      ai_enabled:
+        type: boolean
+      ota_enabled:
+        type: boolean
+      knowledge_enabled:
+        type: boolean
+      crm_enabled:
+        type: boolean
+      analytics_enabled:
+        type: boolean
+      deployment_enabled:
+        type: boolean
+      default_language:
+        type: string
+      timezone:
+        type: string
+  publishing:
+    type: object
+    additionalProperties: false
+    required:
+      - mode
+      - active_property_ids
+      - excluded_property_ids
+      - preserve_unpublished_properties
+      - publish_only_active_properties
+      - publish_only_enabled_properties
+      - require_validation_before_publish
+    properties:
+      mode:
+        type: string
+      active_property_ids:
+        type: array
+        items:
+          type: string
+      excluded_property_ids:
+        type: array
+      preserve_unpublished_properties:
+        type: boolean
+      publish_only_active_properties:
+        type: boolean
+      publish_only_enabled_properties:
+        type: boolean
+      require_validation_before_publish:
+        type: boolean
+  validation:
+    type: object
+    additionalProperties: false
+    required:
+      - require_unique_property_id
+      - require_existing_config_path
+      - require_required_files
+      - require_property_name
+      - require_property_type
+      - require_property_status
+      - require_deletion_protection
+      - prevent_property_id_change
+      - prevent_protected_property_deletion
+      - prevent_duplicate_canonical_domain
+      - prevent_duplicate_ota_property_id
+      - prevent_duplicate_platform_profile_url
+      - prevent_existing_directory_overwrite
+      - validate_yaml_syntax
+      - validate_cross_file_property_id
+      - validate_registry_directory_consistency
+    properties:
+      require_unique_property_id:
+        type: boolean
+      require_existing_config_path:
+        type: boolean
+      require_required_files:
+        type: boolean
+      require_property_name:
+        type: boolean
+      require_property_type:
+        type: boolean
+      require_property_status:
+        type: boolean
+      require_deletion_protection:
+        type: boolean
+      prevent_property_id_change:
+        type: boolean
+      prevent_protected_property_deletion:
+        type: boolean
+      prevent_duplicate_canonical_domain:
+        type: boolean
+      prevent_duplicate_ota_property_id:
+        type: boolean
+      prevent_duplicate_platform_profile_url:
+        type: boolean
+      prevent_existing_directory_overwrite:
+        type: boolean
+      validate_yaml_syntax:
+        type: boolean
+      validate_cross_file_property_id:
+        type: boolean
+      validate_registry_directory_consistency:
+        type: boolean
+  required_property_files:
+    type: array
+    items:
+      type: string
+  supported_statuses:
+    type: array
+    items:
+      type: string
+  supported_property_types:
+    type: array
+    items:
+      type: string
+  properties:
+    type: array
+    items:
+      type: object
+      additionalProperties: false
+      required:
+        - property_id
+        - property_name
+        - property_name_en
+        - property_type
+        - property_type_name
+        - property_type_name_en
+        - operating_model
+        - status
+        - enabled
+        - deletion_protection
+        - config_path
+        - publishing
+        - localization
+        - location
+        - configuration_files
+        - ownership
+        - metadata
+      properties:
+        property_id:
+          type: string
+        property_name:
+          type: string
+        property_name_en:
+          type: string
+        property_type:
+          type: string
+        property_type_name:
+          type: string
+        property_type_name_en:
+          type: string
+        operating_model:
+          type: string
+        status:
+          type: string
+        enabled:
+          type: boolean
+        deletion_protection:
+          type: boolean
+        config_path:
+          type: string
+        publishing:
+          type: object
+          additionalProperties: false
+          required:
+            - public_visibility
+            - website_enabled
+            - ai_enabled
+            - ota_enabled
+            - knowledge_enabled
+            - crm_enabled
+            - analytics_enabled
+            - deployment_enabled
+          properties:
+            public_visibility:
+              type: string
+            website_enabled:
+              type: boolean
+            ai_enabled:
+              type: boolean
+            ota_enabled:
+              type: boolean
+            knowledge_enabled:
+              type: boolean
+            crm_enabled:
+              type: boolean
+            analytics_enabled:
+              type: boolean
+            deployment_enabled:
+              type: boolean
+        localization:
+          type: object
+          additionalProperties: false
+          required:
+            - default_language
+            - supported_languages
+            - timezone
+          properties:
+            default_language:
+              type: string
+            supported_languages:
+              type: array
+              items:
+                type: string
+            timezone:
+              type: string
+        location:
+          type: object
+          additionalProperties: false
+          required:
+            - country_code
+            - country
+            - country_zh
+            - province
+            - province_zh
+            - city
+            - city_zh
+            - district
+            - district_zh
+          properties:
+            country_code:
+              type: string
+            country:
+              type: string
+            country_zh:
+              type: string
+            province:
+              type: string
+            province_zh:
+              type: string
+            city:
+              type: string
+            city_zh:
+              type: string
+            district:
+              type: string
+            district_zh:
+              type: string
+        configuration_files:
+          type: object
+          additionalProperties: false
+          required:
+            - hotel
+            - brand
+            - website
+            - seo
+            - ota
+          properties:
+            hotel:
+              type: string
+            brand:
+              type: string
+            website:
+              type: string
+            seo:
+              type: string
+            ota:
+              type: string
+        ownership:
+          type: object
+          additionalProperties: false
+          required:
+            - management_company
+            - management_company_en
+            - repository_owner
+            - property_manager
+          properties:
+            management_company:
+              type: string
+            management_company_en:
+              type: string
+            repository_owner:
+              type: string
+            property_manager:
+              type: string
+        metadata:
+          type: object
+          additionalProperties: false
+          required:
+            - created_at
+            - updated_at
+            - source
+            - verification_status
+            - notes
+          properties:
+            created_at:
+              type: string
+            updated_at:
+              type: string
+            source:
+              type: string
+            verification_status:
+              type: string
+            notes:
+              type: string
+  governance:
+    type: object
+    additionalProperties: false
+    required:
+      - registry_is_ssot
+      - property_id_is_immutable
+      - archive_before_delete
+      - permanent_deletion_requires_owner_authorization
+      - preserve_historical_registry_records
+      - preserve_existing_property_directories
+      - preserve_existing_property_configuration
+      - prohibit_implicit_deletion
+      - prohibit_automatic_deletion
+      - prohibit_bulk_deletion
+      - change_log_required
+      - manual_review_required
+    properties:
+      registry_is_ssot:
+        type: boolean
+      property_id_is_immutable:
+        type: boolean
+      archive_before_delete:
+        type: boolean
+      permanent_deletion_requires_owner_authorization:
+        type: boolean
+      preserve_historical_registry_records:
+        type: boolean
+      preserve_existing_property_directories:
+        type: boolean
+      preserve_existing_property_configuration:
+        type: boolean
+      prohibit_implicit_deletion:
+        type: boolean
+      prohibit_automatic_deletion:
+        type: boolean
+      prohibit_bulk_deletion:
+        type: boolean
+      change_log_required:
+        type: boolean
+      manual_review_required:
+        type: boolean
+  configuration:
+    type: object
+    additionalProperties: false
+    required:
+      - ssot
+      - source
+      - specification_version
+      - file_version
+      - environment
+      - architecture_status
+      - notes
+    properties:
+      ssot:
+        type: boolean
+      source:
+        type: string
+      specification_version:
+        type: string
+      file_version:
+        type: string
+      environment:
+        type: string
+      architecture_status:
+        type: string
+      notes:
+        type: string

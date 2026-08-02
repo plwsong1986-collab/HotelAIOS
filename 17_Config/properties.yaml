@@ -1,0 +1,362 @@
+# =====================================================================
+# HotelAIOS / AIGOS Property Registry
+# File: 17_Config/properties.yaml
+# Configuration Specification: 1.0
+# File Version: 3.0.0
+# Updated: 2026-08-02
+# =====================================================================
+
+version: "3.0.0"
+
+registry:
+
+  name: HotelAIOS Property Registry
+
+  description: >
+    HotelAIOS 多物业中央注册表。
+    用于登记、定位、验证和保护系统中的酒店、客栈、
+    民宿、度假村及其他住宿物业。
+
+  schema_version: "1.0"
+
+  default_property_id: sanlitian-oxygen-guesthouse-001
+
+  preservation_policy: preservation-first
+
+  deletion_policy: explicit-owner-authorization-only
+
+  default_deletion_protection: true
+
+  allow_automatic_deletion: false
+
+  allow_bulk_deletion: false
+
+  allow_property_id_reuse: false
+
+  preserve_inactive_properties: true
+
+  preserve_archived_properties: true
+
+  created_at: "2026-08-02"
+
+  updated_at: "2026-08-02"
+
+# =====================================================================
+# 默认配置
+# =====================================================================
+
+defaults:
+
+  status: draft
+
+  enabled: true
+
+  deletion_protection: true
+
+  public_visibility: private
+
+  website_enabled: false
+
+  ai_enabled: false
+
+  ota_enabled: false
+
+  knowledge_enabled: false
+
+  crm_enabled: false
+
+  analytics_enabled: false
+
+  deployment_enabled: false
+
+  default_language: zh-CN
+
+  timezone: Asia/Shanghai
+
+# =====================================================================
+# 发布策略
+# =====================================================================
+
+publishing:
+
+  mode: selected-properties
+
+  active_property_ids:
+
+    - sanlitian-oxygen-guesthouse-001
+
+  excluded_property_ids: []
+
+  preserve_unpublished_properties: true
+
+  publish_only_active_properties: true
+
+  publish_only_enabled_properties: true
+
+  require_validation_before_publish: true
+
+# =====================================================================
+# 校验策略
+# =====================================================================
+
+validation:
+
+  require_unique_property_id: true
+
+  require_existing_config_path: true
+
+  require_required_files: true
+
+  require_property_name: true
+
+  require_property_type: true
+
+  require_property_status: true
+
+  require_deletion_protection: true
+
+  prevent_property_id_change: true
+
+  prevent_protected_property_deletion: true
+
+  prevent_duplicate_canonical_domain: true
+
+  prevent_duplicate_ota_property_id: true
+
+  prevent_duplicate_platform_profile_url: true
+
+  prevent_existing_directory_overwrite: true
+
+  validate_yaml_syntax: true
+
+  validate_cross_file_property_id: true
+
+  validate_registry_directory_consistency: true
+
+# =====================================================================
+# 物业必需配置文件
+# =====================================================================
+
+required_property_files:
+
+  - hotel.yaml
+
+  - brand.yaml
+
+  - website.yaml
+
+  - seo.yaml
+
+  - ota.yaml
+
+# =====================================================================
+# 支持的物业状态
+# =====================================================================
+
+supported_statuses:
+
+  - draft
+
+  - active
+
+  - inactive
+
+  - archived
+
+# =====================================================================
+# 支持的物业类型
+# =====================================================================
+
+supported_property_types:
+
+  - hotel
+
+  - inn
+
+  - homestay
+
+  - guesthouse
+
+  - hostel
+
+  - resort
+
+  - lodge
+
+  - serviced-apartment
+
+  - boutique-hotel
+
+  - heritage-hotel
+
+  - other-accommodation
+
+# =====================================================================
+# 正式物业注册表
+# =====================================================================
+
+properties:
+
+  - property_id: sanlitian-oxygen-guesthouse-001
+
+    property_name: 三里田供氧客栈
+
+    property_name_en: Sanlitian Oxygen Boutique Guesthouse
+
+    property_type: guesthouse
+
+    property_type_name: 精品供氧客栈
+
+    property_type_name_en: Boutique Oxygen Guesthouse
+
+    operating_model: independent
+
+    status: active
+
+    enabled: true
+
+    deletion_protection: true
+
+    config_path: properties/sanlitian-oxygen-guesthouse-001
+
+    publishing:
+
+      public_visibility: private
+
+      website_enabled: true
+
+      ai_enabled: true
+
+      ota_enabled: true
+
+      knowledge_enabled: true
+
+      crm_enabled: false
+
+      analytics_enabled: false
+
+      deployment_enabled: false
+
+    localization:
+
+      default_language: zh-CN
+
+      supported_languages:
+
+        - zh-CN
+
+        - en
+
+      timezone: Asia/Shanghai
+
+    location:
+
+      country_code: CN
+
+      country: China
+
+      country_zh: 中国
+
+      province: Yunnan
+
+      province_zh: 云南省
+
+      city: Lijiang
+
+      city_zh: 丽江市
+
+      district: Gucheng District
+
+      district_zh: 古城区
+
+    configuration_files:
+
+      hotel: hotel.yaml
+
+      brand: brand.yaml
+
+      website: website.yaml
+
+      seo: seo.yaml
+
+      ota: ota.yaml
+
+    ownership:
+
+      management_company: 云南三里田酒店管理有限公司
+
+      management_company_en: Yunnan Sanlitian Hotel Management Co., Ltd.
+
+      repository_owner: ""
+
+      property_manager: ""
+
+    metadata:
+
+      created_at: "2026-08-02"
+
+      updated_at: "2026-08-02"
+
+      source: property-owner
+
+      verification_status: partially-verified
+
+      notes: >
+        HotelAIOS 登记的第一家正式物业。
+        三里田供氧客栈位于中国云南省丽江市古城区，
+        是一家以供氧客房、传统庭院、三眼井在地文化和
+        温暖家庭式服务为核心特色的精品客栈。
+
+# =====================================================================
+# 数据治理
+# =====================================================================
+
+governance:
+
+  registry_is_ssot: true
+
+  property_id_is_immutable: true
+
+  archive_before_delete: true
+
+  permanent_deletion_requires_owner_authorization: true
+
+  preserve_historical_registry_records: true
+
+  preserve_existing_property_directories: true
+
+  preserve_existing_property_configuration: true
+
+  prohibit_implicit_deletion: true
+
+  prohibit_automatic_deletion: true
+
+  prohibit_bulk_deletion: true
+
+  change_log_required: true
+
+  manual_review_required: true
+
+# =====================================================================
+# 配置状态
+# =====================================================================
+
+configuration:
+
+  ssot: true
+
+  source: HotelAIOS
+
+  specification_version: "1.0"
+
+  file_version: "3.0.0"
+
+  environment: implementation
+
+  architecture_status: configuration-specification-freeze
+
+  notes: >
+    本文件是 HotelAIOS 多物业注册、路径定位、
+    生命周期状态、删除保护和发布范围的权威配置。
+    任何物业必须先在本文件登记，才能进入正式校验、
+    发布、网站生成、AI 检索和渠道分发流程。

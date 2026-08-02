@@ -1,0 +1,201 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "AIGOS: 同步开发环境",
+            "type": "shell",
+            "command": "uv",
+            "args": [
+                "sync",
+                "--extra",
+                "development"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            }
+        },
+        {
+            "label": "AIGOS: 校验多物业配置",
+            "type": "shell",
+            "command": "uv",
+            "args": [
+                "run",
+                "python",
+                "19_Automation/validators/validate-properties.py"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            },
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "AIGOS: Ruff 代码检查",
+            "type": "shell",
+            "command": "uv",
+            "args": [
+                "run",
+                "ruff",
+                "check",
+                "19_Automation"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            }
+        },
+        {
+            "label": "AIGOS: Ruff 自动修复",
+            "type": "shell",
+            "command": "uv",
+            "args": [
+                "run",
+                "ruff",
+                "check",
+                "19_Automation",
+                "--fix"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            }
+        },
+        {
+            "label": "AIGOS: Ruff 格式检查",
+            "type": "shell",
+            "command": "uv",
+            "args": [
+                "run",
+                "ruff",
+                "format",
+                "--check",
+                "19_Automation"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            }
+        },
+        {
+            "label": "AIGOS: Ruff 格式化代码",
+            "type": "shell",
+            "command": "uv",
+            "args": [
+                "run",
+                "ruff",
+                "format",
+                "19_Automation"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            }
+        },
+        {
+            "label": "AIGOS: 运行测试",
+            "type": "shell",
+            "command": "uv",
+            "args": [
+                "run",
+                "pytest"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            }
+        },
+        {
+            "label": "AIGOS: Python 类型检查",
+            "type": "shell",
+            "command": "uv",
+            "args": [
+                "run",
+                "mypy",
+                "19_Automation"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            }
+        },
+        {
+            "label": "AIGOS: 基础质量检查",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "AIGOS: 校验多物业配置",
+                "AIGOS: Ruff 代码检查",
+                "AIGOS: Ruff 格式检查"
+            ],
+            "problemMatcher": [],
+            "group": "test"
+        },
+        {
+            "label": "AIGOS: 完整质量检查",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "AIGOS: 同步开发环境",
+                "AIGOS: 校验多物业配置",
+                "AIGOS: Ruff 代码检查",
+                "AIGOS: Ruff 格式检查",
+                "AIGOS: Python 类型检查",
+                "AIGOS: 运行测试"
+            ],
+            "problemMatcher": [],
+            "group": "test"
+        },
+        {
+            "label": "AIGOS: 自动修复与格式化",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "AIGOS: Ruff 自动修复",
+                "AIGOS: Ruff 格式化代码",
+                "AIGOS: 校验多物业配置"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

@@ -1,0 +1,96 @@
+# =====================================================================
+# HotelAIOS / AIGOS
+# OTA Schema
+# File: ota.schema.yaml
+# Applies To: ota.yaml
+# Schema Version: 1.0.0
+# Status: Official Release
+# =====================================================================
+
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://hotelaios.local/schemas/ota.schema.yaml"
+
+title: HotelAIOS OTA Configuration Schema
+
+type: object
+additionalProperties: false
+
+required:
+  - ota
+  - metadata
+  - distribution
+  - channels
+  - room_mapping
+  - content_sources
+  - images
+  - policies
+  - compliance
+  - publishing
+  - references
+  - governance
+  - configuration
+
+properties:
+  ota:
+    type: object
+    additionalProperties: false
+    required: [property_id,enabled,default_language,supported_languages]
+    properties:
+      property_id:
+        type: string
+        pattern: "^[a-z0-9]+(?:-[a-z0-9]+)*-[0-9]{3}$"
+      enabled: {type: boolean}
+      default_language: {enum: ["zh-CN","en"]}
+      supported_languages:
+        type: array
+        items: {enum: ["zh-CN","en"]}
+  metadata:
+    type: object
+    additionalProperties: false
+    required: [schema_version,file_version,created_at,updated_at,maintained_by,source]
+    properties:
+      schema_version: {const: "1.0"}
+      file_version: {type: string}
+      created_at: {type: string}
+      updated_at: {type: string}
+      maintained_by: {type: string}
+      source: {type: string}
+  distribution: {type: object}
+  channels: {type: object}
+  room_mapping:
+    type: array
+    items: {type: object}
+  content_sources: {type: object}
+  images: {type: object}
+  policies: {type: object}
+  compliance:
+    type: object
+    required: [prohibit_medical_claims,require_fact_based_content]
+    properties:
+      prohibit_medical_claims: {const: true}
+      require_fact_based_content: {const: true}
+  publishing: {type: object}
+  references:
+    type: object
+    required: [hotel,brand,website,seo]
+    properties:
+      hotel: {const: hotel.yaml}
+      brand: {const: brand.yaml}
+      website: {const: website.yaml}
+      seo: {const: seo.yaml}
+  governance:
+    type: object
+    required: [ssot,allow_automatic_overwrite,allow_automatic_deletion,validation_required_before_publish]
+    properties:
+      ssot: {const: true}
+      allow_automatic_overwrite: {const: false}
+      allow_automatic_deletion: {const: false}
+      validation_required_before_publish: {const: true}
+  configuration:
+    type: object
+    required: [generator_ready,validator_ready,template_compatible,notes]
+    properties:
+      generator_ready: {type: boolean}
+      validator_ready: {type: boolean}
+      template_compatible: {type: boolean}
+      notes: {type: string}

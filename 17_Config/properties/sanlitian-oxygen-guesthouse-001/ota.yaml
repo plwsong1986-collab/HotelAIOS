@@ -1,0 +1,167 @@
+# =====================================================================
+# HotelAIOS / AIGOS
+# OTA Distribution Configuration
+# File: ota.yaml
+# Property: Sanlitian Oxygen Boutique Guesthouse
+# Property ID: sanlitian-oxygen-guesthouse-001
+# Configuration Specification: 1.0
+# File Version: 4.0.0
+# Status: Official Release
+# Updated: 2026-08-02
+# =====================================================================
+
+ota:
+  property_id: sanlitian-oxygen-guesthouse-001
+  enabled: true
+  default_language: zh-CN
+  supported_languages:
+    - zh-CN
+    - en
+
+metadata:
+  schema_version: "1.0"
+  file_version: "4.0.0"
+  created_at: "2026-08-02"
+  updated_at: "2026-08-02"
+  maintained_by: HotelAIOS
+  source: property-owner
+
+distribution:
+  strategy: direct-and-ota
+  channel_manager: ""
+  synchronization:
+    inventory: true
+    rates: true
+    restrictions: true
+    content: manual
+
+channels:
+  booking:
+    enabled: false
+    property_id: ""
+    status: draft
+  agoda:
+    enabled: false
+    property_id: ""
+    status: draft
+  expedia:
+    enabled: false
+    property_id: ""
+    status: draft
+  trip:
+    enabled: false
+    property_id: ""
+    status: draft
+  airbnb:
+    enabled: false
+    property_id: ""
+    status: draft
+  google_hotels:
+    enabled: false
+    property_id: ""
+    status: draft
+
+room_mapping:
+  - local_room_id: king-room
+    local_name: King Room
+    booking_name: ""
+    agoda_name: ""
+    expedia_name: ""
+    trip_name: ""
+    airbnb_name: ""
+  - local_room_id: twin-room
+    local_name: Twin Room
+    booking_name: ""
+    agoda_name: ""
+    expedia_name: ""
+    trip_name: ""
+    airbnb_name: ""
+  - local_room_id: family-room
+    local_name: Family Room
+    booking_name: ""
+    agoda_name: ""
+    expedia_name: ""
+    trip_name: ""
+    airbnb_name: ""
+  - local_room_id: loft-family-room
+    local_name: Loft Family Room
+    booking_name: ""
+    agoda_name: ""
+    expedia_name: ""
+    trip_name: ""
+    airbnb_name: ""
+  - local_room_id: private-villa
+    local_name: Private Villa
+    booking_name: ""
+    agoda_name: ""
+    expedia_name: ""
+    trip_name: ""
+    airbnb_name: ""
+
+content_sources:
+  property_name: hotel.yaml:property.property_name_en
+  short_description: brand.yaml:messaging.short_description
+  long_description: brand.yaml:story.short_summary
+  brand_story: brand.yaml:story.full_story_en
+  facilities: hotel.yaml:facilities
+  breakfast: hotel.yaml:breakfast
+  contact: hotel.yaml:contact
+  location: hotel.yaml:location
+
+images:
+  cover: ""
+  exterior: []
+  rooms: []
+  facilities: []
+  breakfast: []
+  nearby: []
+  gallery_limit: null
+
+policies:
+  check_in_source: hotel.yaml:operations.check_in.standard_time
+  check_out_source: hotel.yaml:operations.check_out.standard_time
+  cancellation_policy: ""
+  children_policy: ""
+  pet_policy: ""
+  smoking_policy: ""
+  payment_source: hotel.yaml:payments
+
+compliance:
+  prohibit_medical_claims: true
+  require_fact_based_content: true
+  allow_oxygen_description: true
+  oxygen_description_rule: >
+    Describe oxygen-related facilities as a comfort feature only.
+    Do not state or imply diagnosis, treatment, prevention, or cure of altitude sickness.
+  prohibited_claims:
+    - medical oxygen treatment
+    - guaranteed prevention of altitude sickness
+    - cure altitude sickness
+    - best hotel in Lijiang
+
+publishing:
+  auto_publish: false
+  manual_review_required: true
+  content_review_required: true
+  image_review_required: true
+
+references:
+  hotel: hotel.yaml
+  brand: brand.yaml
+  website: website.yaml
+  seo: seo.yaml
+
+governance:
+  ssot: true
+  allow_automatic_overwrite: false
+  allow_automatic_deletion: false
+  validation_required_before_publish: true
+  preserve_channel_ids: true
+
+configuration:
+  generator_ready: true
+  validator_ready: true
+  template_compatible: true
+  notes: >
+    OTA 配置负责渠道映射、发布状态和 OTA 专属策略。
+    酒店、品牌、SEO 信息均引用对应配置文件，不重复维护。

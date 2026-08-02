@@ -1,0 +1,542 @@
+# =====================================================================
+# HotelAIOS / AIGOS
+# Property Core Configuration
+# File: hotel.yaml
+# Property: Sanlitian Oxygen Boutique Guesthouse
+# Property ID: sanlitian-oxygen-guesthouse-001
+# Configuration Specification: 1.0
+# File Version: 4.0.0
+# Status: Official Release
+# Updated: 2026-08-02
+# =====================================================================
+
+property:
+  property_id: sanlitian-oxygen-guesthouse-001
+  property_name: 三里田供氧客栈
+  property_name_en: Sanlitian Oxygen Boutique Guesthouse
+  short_name: 三里田供氧
+  short_name_en: Sanlitian Oxygen
+  property_type: guesthouse
+  property_type_name: 精品供氧客栈
+  property_type_name_en: Boutique Oxygen Guesthouse
+  operating_model: independent
+  lifecycle_status: active
+  enabled: true
+  deletion_protection: true
+
+metadata:
+  schema_version: "1.0"
+  file_version: "4.0.0"
+  created_at: "2026-08-02"
+  updated_at: "2026-08-02"
+  maintained_by: HotelAIOS
+  source: property-owner
+  verification_status: partially-verified
+  review_required: true
+  default_language: zh-CN
+  timezone: Asia/Shanghai
+
+legal_identity:
+  operating_company:
+    name_zh: 云南三里田酒店管理有限公司
+    name_en: Yunnan Sanlitian Hotel Management Co., Ltd.
+  registration_number: ""
+  tax_identifier: ""
+  ownership_type: independent
+  license_status: pending-entry
+
+commercial_identity:
+  display_name_zh: 三里田供氧客栈
+  display_name_en: Sanlitian Oxygen Boutique Guesthouse
+  accommodation_category: Boutique Guesthouse
+  market_positioning_zh: 丽江古城三眼井旁的供氧精品客栈
+  market_positioning_en: An oxygen-focused boutique guesthouse beside Three-Eyed Well in Lijiang Old Town
+  opening:
+    opening_year: 2026
+    opening_month: 1
+    opening_date: "2026-01"
+    operating_status: active
+
+location:
+  country:
+    code: CN
+    name_zh: 中国
+    name_en: China
+  province:
+    name_zh: 云南省
+    name_en: Yunnan
+  city:
+    name_zh: 丽江市
+    name_en: Lijiang
+  district:
+    name_zh: 古城区
+    name_en: Gucheng District
+  locality:
+    name_zh: 丽江古城
+    name_en: Lijiang Old Town
+  neighborhood:
+    name_zh: 三眼井片区
+    name_en: Three-Eyed Well Area
+  street:
+    name_zh: 光义街光碧巷69号
+    name_en: No. 69, Guangbi Alley, Guangyi Street
+  full_address:
+    zh: 中国云南省丽江市古城区光义街光碧巷69号
+    en: No. 69, Guangbi Alley, Guangyi Street, Gucheng District, Lijiang, Yunnan 674100, China
+  postal_code: "674100"
+  coordinates:
+    latitude: 26.880675
+    longitude: 100.224167
+    latitude_dms: "26°52′50.43″ N"
+    longitude_dms: "100°13′27.0″ E"
+    source: owner-provided-and-converted
+    verification_status: pending-google-maps-pin-verification
+  altitude_meters: null
+  timezone: Asia/Shanghai
+
+contact:
+  phone:
+    primary: "+86 131 8775 9333"
+    normalized: "+8613187759333"
+    reservations: "+86 131 8775 9333"
+    emergency: ""
+  email:
+    primary: "982316252@qq.com"
+    reservations: "982316252@qq.com"
+  wechat:
+    account: "13187759333"
+    display: "+86 13187759333"
+  whatsapp:
+    number: "+44 7907 179618"
+    normalized: "+447907179618"
+  website:
+    url: ""
+    status: coming-soon
+
+operations:
+  front_desk:
+    available: true
+    hours: ""
+    twenty_four_hours: null
+  check_in:
+    standard_time: "14:00"
+    early_check_in_available: null
+    identification_required: null
+  check_out:
+    standard_time: "12:00"
+    late_check_out_available: null
+  capacity:
+    total_rooms: 16
+    maximum_guests: 50
+    building_count: 1
+    floor_count: null
+  accepted_currency:
+    - CNY
+  languages:
+    default: zh-CN
+    supported:
+      - zh-CN
+      - en
+    chinese_available: true
+    english_available: true
+    other_languages: []
+
+accommodation:
+  total_rooms: 16
+  total_room_types: 5
+  inventory_verified: true
+  room_types:
+    - room_type_id: king-room
+      name_zh: 大床房
+      name_en: King Room
+      quantity: 7
+      maximum_guests: null
+      room_size_sqm: null
+      bed_configuration:
+        bed_type: king
+        bed_count: 1
+        bed_size: ""
+      oxygen_supply: true
+      status: active
+    - room_type_id: twin-room
+      name_zh: 双床房
+      name_en: Twin Room
+      quantity: 3
+      maximum_guests: null
+      room_size_sqm: null
+      bed_configuration:
+        bed_type: twin
+        bed_count: 2
+        bed_size: ""
+      oxygen_supply: true
+      status: active
+    - room_type_id: family-room
+      name_zh: 家庭房
+      name_en: Family Room
+      quantity: 3
+      maximum_guests: null
+      room_size_sqm: null
+      bed_configuration:
+        bed_type: mixed
+        bed_count: null
+        bed_size: ""
+      oxygen_supply: true
+      status: active
+    - room_type_id: loft-family-room
+      name_zh: 复式家庭房
+      name_en: Loft Family Room
+      quantity: 2
+      maximum_guests: null
+      room_size_sqm: null
+      bed_configuration:
+        bed_type: mixed
+        bed_count: null
+        bed_size: ""
+      oxygen_supply: true
+      status: active
+    - room_type_id: private-villa
+      name_zh: 独栋别墅
+      name_en: Private Villa
+      quantity: 1
+      maximum_guests: null
+      room_size_sqm: null
+      bed_configuration:
+        bed_type: mixed
+        bed_count: null
+        bed_size: ""
+      oxygen_supply: true
+      status: active
+
+oxygen_service:
+  available: true
+  service_name_zh: 客房供氧服务
+  service_name_en: In-room Oxygen Supply
+  coverage: guest-rooms
+  operating_hours: continuous
+  system_type: whole-room-oxygen-system
+  equipment_details: ""
+  medical_service: false
+  medical_claims_allowed: false
+  description_zh: 客房配置持续供氧相关设施，用于提升高原旅居舒适度。
+  description_en: Guest rooms provide oxygen-related facilities intended to support a more comfortable high-altitude stay.
+  disclaimer_zh: 客栈供氧设施不属于医疗诊断、治疗或急救服务；如出现明显身体不适，请及时寻求专业医疗帮助。
+  disclaimer_en: Oxygen-related facilities are not a substitute for medical diagnosis, treatment or emergency care.
+
+breakfast:
+  available: true
+  included: true
+  complimentary: true
+  type: chinese
+  name_zh: 免费中式早餐
+  name_en: Complimentary Chinese Breakfast
+  serving_time:
+    start: "08:00"
+    end: "10:00"
+  serving_location: ""
+  dietary_options: []
+  reservation_required: false
+
+internet:
+  wifi_available: true
+  complimentary: true
+  advertised_speed_mbps: 300
+  coverage: property-wide
+  network_name: ""
+  password_management: private
+  description_zh: 300 Mbps 高速无线网络
+  description_en: 300 Mbps high-speed Wi-Fi
+
+climate_and_water:
+  air_conditioning:
+    available: true
+    type: independent-central-air-conditioning
+    cooling_available: true
+    heating_available: true
+    independently_controlled: true
+  hot_water:
+    available: true
+    twenty_four_hours: true
+  ventilation:
+    natural_ventilation: true
+    mechanical_ventilation: null
+
+facilities:
+  garden:
+    available: true
+    name_zh: 中式传统花园
+    name_en: Traditional Chinese Garden
+  terrace:
+    available: true
+    name_zh: 三眼井观景露台
+    name_en: Viewing Terrace Overlooking Three-Eyed Well
+    description_zh: 可俯瞰三眼井的观景露台
+    description_en: Viewing terrace overlooking Three-Eyed Well
+  tea_room:
+    available: true
+    name_zh: 传统茶室
+    name_en: Traditional Tea Room
+  elevator:
+    available: null
+  luggage_storage:
+    available: null
+  public_lounge:
+    available: null
+  reception_area:
+    available: true
+
+laundry:
+  available: true
+  complimentary: true
+  self_service: true
+  washer_available: true
+  dryer_available: true
+  ironing_available: null
+  description_zh: 免费洗衣机和烘干机
+  description_en: Complimentary washer and dryer
+
+parking:
+  available: true
+  on_site: false
+  type: public-parking
+  name_zh: 白龙广场公共停车场
+  name_en: Bailong Square Public Parking Lot
+  fee: null
+  reservation_required: null
+  distance_meters: null
+  directions: ""
+
+transportation:
+  supported_modes:
+    - taxi
+    - airport-transfer
+    - walking
+  taxi_assistance: true
+  airport_transfer:
+    available: true
+    complimentary: null
+    reservation_required: true
+    fee: null
+  railway_station_transfer:
+    available: null
+    reservation_required: null
+    fee: null
+  walking_access:
+    lijiang_old_town: true
+    description_zh: 可步行前往丽江古城主要街巷与景点
+    description_en: Walking access to the main streets and attractions of Lijiang Old Town
+  nearest_airport:
+    name_zh: ""
+    name_en: ""
+    distance_km: null
+  nearest_railway_station:
+    name_zh: ""
+    name_en: ""
+    distance_km: null
+
+nearby_places:
+  - place_id: three-eyed-well
+    name_zh: 三眼井
+    name_en: Three-Eyed Well
+    category: landmark
+    distance_meters: null
+    walking_minutes: null
+  - place_id: mu-mansion
+    name_zh: 木府
+    name_en: Mu Mansion
+    category: attraction
+    distance_meters: null
+    walking_minutes: null
+  - place_id: lion-hill
+    name_zh: 狮子山
+    name_en: Lion Hill
+    category: attraction
+    distance_meters: null
+    walking_minutes: null
+  - place_id: wangu-pavilion
+    name_zh: 万古楼
+    name_en: Wangu Pavilion
+    category: attraction
+    distance_meters: null
+    walking_minutes: null
+  - place_id: sifang-street
+    name_zh: 四方街
+    name_en: Sifang Street
+    category: attraction
+    distance_meters: null
+    walking_minutes: null
+  - place_id: zhongyi-market
+    name_zh: 忠义市场
+    name_en: Zhongyi Market
+    category: market
+    distance_meters: null
+    walking_minutes: null
+  - place_id: zhongyi-night-market
+    name_zh: 忠义夜市
+    name_en: Zhongyi Night Market
+    category: night-market
+    distance_meters: null
+    walking_minutes: null
+  - place_id: yulong-snow-mountain-shuttle-stop
+    name_zh: 玉龙雪山专线车乘车点
+    name_en: Yulong Snow Mountain Shuttle Bus Stop
+    category: transportation
+    distance_meters: null
+    walking_minutes: null
+
+payments:
+  accepted:
+    cash: true
+    visa: true
+    mastercard: true
+    unionpay: true
+    alipay: true
+    wechat_pay: true
+    american_express: false
+  currencies:
+    - CNY
+  deposits:
+    required: null
+    amount: null
+    currency: CNY
+  invoicing:
+    available: null
+    invoice_type: []
+
+guest_segments:
+  couples:
+    supported: true
+  families:
+    supported: true
+  children:
+    supported: true
+  seniors:
+    supported: true
+  international_guests:
+    supported: true
+  long_stay:
+    supported: true
+  groups:
+    supported: true
+    maximum_group_size: null
+
+policies:
+  children:
+    allowed: true
+    age_definition: ""
+    extra_bed_available: null
+    crib_available: null
+  pets:
+    allowed: null
+    restrictions: ""
+  smoking:
+    policy: ""
+    designated_area_available: null
+  quiet_hours:
+    enabled: null
+    start: ""
+    end: ""
+  parties:
+    allowed: null
+  visitors:
+    allowed: null
+    registration_required: null
+  cancellation:
+    policy_reference: ota.yaml
+    property_level_default: ""
+  damage_deposit:
+    required: null
+    amount: null
+    currency: CNY
+  identification:
+    required: null
+    accepted_documents: []
+
+accessibility:
+  wheelchair_accessible: null
+  step_free_access: null
+  accessible_rooms_available: null
+  accessible_bathroom_available: null
+  elevator_available: null
+  assistance_available: null
+  notes: ""
+
+safety:
+  fire_extinguishers: null
+  smoke_detectors: null
+  carbon_monoxide_detectors: null
+  emergency_lighting: null
+  evacuation_plan: null
+  first_aid_kit: null
+  security_cameras_public_areas: null
+  twenty_four_hour_security: null
+  emergency_numbers:
+    police: "110"
+    fire: "119"
+    ambulance: "120"
+
+sustainability:
+  enabled: null
+  waste_sorting: null
+  reusable_amenities: null
+  water_saving: null
+  energy_saving: null
+  local_sourcing: null
+  notes: ""
+
+media:
+  logo: ""
+  cover_image: ""
+  gallery: []
+  room_galleries: {}
+  floor_plans: []
+  virtual_tour_url: ""
+  video_urls: []
+  media_verification_status: not-provided
+
+systems:
+  website_enabled: true
+  ai_enabled: true
+  knowledge_enabled: true
+  rag_enabled: true
+  ota_enabled: true
+  crm_enabled: false
+  analytics_enabled: false
+  deployment_enabled: false
+  booking_engine_enabled: false
+
+references:
+  registry: ../../properties.yaml
+  brand: brand.yaml
+  website: website.yaml
+  seo: seo.yaml
+  ota: ota.yaml
+  knowledge_root: ../../../03_Knowledge
+  manuals_root: ../../../16_Manuals
+
+governance:
+  authoritative_source: property-owner
+  property_id_immutable: true
+  preserve_existing_data: true
+  preserve_historical_values: true
+  allow_automatic_overwrite: false
+  allow_automatic_deletion: false
+  deletion_protection: true
+  manual_review_required: true
+  validation_required_before_publish: true
+  unverified_claims_publish_prohibited: true
+  medical_claims_prohibited: true
+  source_attribution_required_for_external_data: true
+  last_verified_at: ""
+  verified_by: ""
+
+configuration:
+  ssot: true
+  specification_version: "1.0"
+  file_version: "4.0.0"
+  environment: implementation
+  template_compatible: true
+  generator_ready: true
+  validator_ready: true
+  notes: >
+    本文件是三里田供氧客栈物业核心信息的权威配置来源。
+    未确认字段使用空字符串或 null，任何系统不得用推测数据覆盖。

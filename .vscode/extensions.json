@@ -1,0 +1,23 @@
+{
+    "recommendations": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "charliermarsh.ruff",
+        "redhat.vscode-yaml",
+        "yzhang.markdown-all-in-one",
+        "davidanson.vscode-markdownlint",
+        "github.vscode-github-actions",
+        "github.vscode-pull-request-github",
+        "eamodio.gitlens",
+        "tamasfe.even-better-toml",
+        "editorconfig.editorconfig",
+        "streetsidesoftware.code-spell-checker",
+        "bierner.markdown-mermaid",
+        "bierner.markdown-preview-github-styles",
+        "ms-azuretools.vscode-docker",
+        "esbenp.prettier-vscode"
+    ],
+    "unwantedRecommendations": [
+        "ms-python.vscode-python-envs"
+    ]
+}

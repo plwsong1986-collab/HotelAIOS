@@ -1,0 +1,310 @@
+# =====================================================================
+# HotelAIOS / AIGOS
+# Website Schema
+# File: website.schema.yaml
+# Applies To: website.yaml
+# Schema Version: 1.0.0
+# Status: Official Release
+# Updated: 2026-08-02
+# =====================================================================
+
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://hotelaios.local/schemas/website.schema.yaml"
+
+title: HotelAIOS Website Configuration Schema
+description: Validates website.yaml configuration.
+
+type: object
+additionalProperties: false
+
+required:
+  - website
+  - metadata
+  - deployment
+  - branding
+  - navigation
+  - homepage
+  - pages
+  - footer
+  - booking
+  - social
+  - analytics
+  - seo
+  - references
+  - governance
+  - configuration
+
+properties:
+
+  website:
+    type: object
+    additionalProperties: false
+    required:
+      - property_id
+      - site_id
+      - site_name
+      - enabled
+      - default_language
+      - supported_languages
+    properties:
+      property_id:
+        type: string
+        pattern: "^[a-z0-9]+(?:-[a-z0-9]+)*-[0-9]{3}$"
+      site_id:
+        type: string
+      site_name:
+        type: string
+      enabled:
+        type: boolean
+      default_language:
+        enum: ["zh-CN","en"]
+      supported_languages:
+        type: array
+        minItems: 1
+        uniqueItems: true
+        items:
+          enum: ["zh-CN","en"]
+
+  metadata:
+    type: object
+    additionalProperties: false
+    required:
+      - schema_version
+      - file_version
+      - created_at
+      - updated_at
+      - maintained_by
+      - source
+    properties:
+      schema_version:
+        const: "1.0"
+      file_version:
+        type: string
+        pattern: "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+      created_at:
+        type: string
+        format: date
+      updated_at:
+        type: string
+        format: date
+      maintained_by:
+        type: string
+      source:
+        type: string
+
+  deployment:
+    type: object
+    additionalProperties: false
+    required:
+      - environment
+      - domain
+      - ssl
+      - cdn
+    properties:
+      environment:
+        enum: [development,staging,production]
+      domain:
+        type: object
+        additionalProperties: false
+        required: [primary,status]
+        properties:
+          primary: {type: string}
+          status:
+            enum: [coming-soon,active,inactive]
+      ssl:
+        type: object
+        additionalProperties: false
+        required: [enabled,provider]
+        properties:
+          enabled: {type: boolean}
+          provider: {type: string}
+      cdn:
+        type: object
+        additionalProperties: false
+        required: [enabled]
+        properties:
+          enabled: {type: boolean}
+
+  branding:
+    type: object
+    additionalProperties: false
+    required: [logo,favicon,theme]
+    properties:
+      logo: {type: string}
+      favicon: {type: string}
+      theme:
+        type: object
+        additionalProperties: false
+        required: [style,primary_color,secondary_color,accent_color]
+        properties:
+          style: {type: string}
+          primary_color: {type: string}
+          secondary_color: {type: string}
+          accent_color: {type: string}
+
+  navigation:
+    type: object
+    additionalProperties: false
+    required: [header]
+    properties:
+      header:
+        type: array
+        minItems: 1
+        items:
+          type: object
+          additionalProperties: false
+          required: [id,zh,en]
+          properties:
+            id: {type: string}
+            zh: {type: string}
+            en: {type: string}
+
+  homepage:
+    type: object
+    additionalProperties: false
+    required: [hero,sections]
+    properties:
+      hero:
+        type: object
+        additionalProperties: false
+        required:
+          - enabled
+          - title_source
+          - description_source
+          - cover_image
+          - primary_cta
+          - secondary_cta
+        properties:
+          enabled: {type: boolean}
+          title_source: {type: string}
+          description_source: {type: string}
+          cover_image: {type: string}
+          primary_cta: {$ref: "#/$defs/langpair"}
+          secondary_cta: {$ref: "#/$defs/langpair"}
+      sections:
+        type: array
+        items: {type: string}
+
+  pages:
+    type: object
+    additionalProperties: false
+    required:
+      - home
+      - rooms
+      - facilities
+      - story
+      - location
+      - contact
+      - privacy
+      - terms
+    properties:
+      home: {type: boolean}
+      rooms: {type: boolean}
+      facilities: {type: boolean}
+      story: {type: boolean}
+      location: {type: boolean}
+      contact: {type: boolean}
+      privacy: {type: boolean}
+      terms: {type: boolean}
+
+  footer:
+    type: object
+    additionalProperties: false
+    required:
+      - show_contact
+      - show_address
+      - show_copyright
+      - copyright
+    properties:
+      show_contact: {type: boolean}
+      show_address: {type: boolean}
+      show_copyright: {type: boolean}
+      copyright: {type: string}
+
+  booking:
+    type: object
+    additionalProperties: false
+    required:
+      - enabled
+      - booking_engine
+      - reservation_email_source
+      - reservation_phone_source
+    properties:
+      enabled: {type: boolean}
+      booking_engine: {type: string}
+      reservation_email_source: {type: string}
+      reservation_phone_source: {type: string}
+
+  social:
+    type: object
+    additionalProperties: false
+    properties:
+      wechat: {type: string}
+      whatsapp: {type: string}
+      facebook: {type: string}
+      instagram: {type: string}
+      x: {type: string}
+      youtube: {type: string}
+
+  analytics:
+    type: object
+    additionalProperties: false
+    properties:
+      google_analytics: {type: string}
+      google_tag_manager: {type: string}
+      microsoft_clarity: {type: string}
+
+  seo:
+    type: object
+    additionalProperties: false
+    required: [configuration_source]
+    properties:
+      configuration_source:
+        const: seo.yaml
+
+  references:
+    type: object
+    additionalProperties: false
+    required: [hotel,brand,seo,ota]
+    properties:
+      hotel: {const: hotel.yaml}
+      brand: {const: brand.yaml}
+      seo: {const: seo.yaml}
+      ota: {const: ota.yaml}
+
+  governance:
+    type: object
+    additionalProperties: false
+    required:
+      - ssot
+      - allow_automatic_overwrite
+      - manual_review_required
+      - validation_required_before_publish
+    properties:
+      ssot: {const: true}
+      allow_automatic_overwrite: {const: false}
+      manual_review_required: {const: true}
+      validation_required_before_publish: {const: true}
+
+  configuration:
+    type: object
+    additionalProperties: false
+    required:
+      - generator_ready
+      - validator_ready
+      - template_compatible
+      - notes
+    properties:
+      generator_ready: {type: boolean}
+      validator_ready: {type: boolean}
+      template_compatible: {type: boolean}
+      notes: {type: string}
+
+$defs:
+  langpair:
+    type: object
+    additionalProperties: false
+    required: [zh,en]
+    properties:
+      zh: {type: string}
+      en: {type: string}

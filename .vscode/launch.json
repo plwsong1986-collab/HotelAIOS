@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: 当前文件",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "justMyCode": true
+        },
+        {
+            "name": "Validate Properties",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/19_Automation/validators/validate-properties.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "justMyCode": true
+        },
+        {
+            "name": "Validate Single YAML",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/19_Automation/validators/validate-properties.py",
+            "args": [
+                "${file}"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "justMyCode": true
+        }
+    ]
+}

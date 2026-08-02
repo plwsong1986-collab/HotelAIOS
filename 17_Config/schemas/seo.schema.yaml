@@ -1,0 +1,239 @@
+# =====================================================================
+# HotelAIOS / AIGOS
+# SEO Schema
+# File: seo.schema.yaml
+# Applies To: seo.yaml
+# Schema Version: 1.0.0
+# Status: Official Release
+# Updated: 2026-08-02
+# =====================================================================
+
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://hotelaios.local/schemas/seo.schema.yaml"
+
+title: HotelAIOS SEO Configuration Schema
+description: Validates seo.yaml for HotelAIOS properties.
+
+type: object
+additionalProperties: false
+
+required:
+  - seo
+  - metadata
+  - site
+  - meta
+  - open_graph
+  - twitter
+  - structured_data
+  - ai_search
+  - references
+  - governance
+  - configuration
+
+properties:
+
+  seo:
+    type: object
+    additionalProperties: false
+    required:
+      - property_id
+      - enabled
+      - default_language
+      - supported_languages
+    properties:
+      property_id:
+        type: string
+        pattern: "^[a-z0-9]+(?:-[a-z0-9]+)*-[0-9]{3}$"
+      enabled:
+        type: boolean
+      default_language:
+        enum: ["zh-CN","en"]
+      supported_languages:
+        type: array
+        minItems: 1
+        uniqueItems: true
+        items:
+          enum: ["zh-CN","en"]
+
+  metadata:
+    type: object
+    additionalProperties: false
+    required:
+      - schema_version
+      - file_version
+      - created_at
+      - updated_at
+      - maintained_by
+      - source
+    properties:
+      schema_version: {const: "1.0"}
+      file_version:
+        type: string
+        pattern: "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+      created_at:
+        type: string
+        format: date
+      updated_at:
+        type: string
+        format: date
+      maintained_by:
+        type: string
+      source:
+        type: string
+
+  site:
+    type: object
+    additionalProperties: false
+    required: [canonical_url,robots,sitemap]
+    properties:
+      canonical_url: {type: string}
+      robots:
+        enum: ["index,follow","noindex,nofollow","index,nofollow","noindex,follow"]
+      sitemap:
+        type: string
+
+  meta:
+    type: object
+    additionalProperties: false
+    required: [homepage]
+    properties:
+      homepage:
+        type: object
+        additionalProperties: false
+        required: [title,description,keywords]
+        properties:
+          title: {$ref: "#/$defs/langpair"}
+          description: {$ref: "#/$defs/langpair"}
+          keywords:
+            type: object
+            additionalProperties: false
+            required: [zh,en]
+            properties:
+              zh:
+                type: array
+                minItems: 1
+                items: {type: string}
+              en:
+                type: array
+                minItems: 1
+                items: {type: string}
+
+  open_graph:
+    type: object
+    additionalProperties: false
+    required: [type,site_name,locale,image]
+    properties:
+      type:
+        enum: [website,article]
+      site_name:
+        type: string
+      locale:
+        type: string
+      image:
+        type: string
+
+  twitter:
+    type: object
+    additionalProperties: false
+    required: [card,site,creator]
+    properties:
+      card:
+        enum: [summary,summary_large_image]
+      site:
+        type: string
+      creator:
+        type: string
+
+  structured_data:
+    type: object
+    additionalProperties: false
+    required:
+      - type
+      - name_source
+      - address_source
+      - phone_source
+      - image
+      - price_range
+      - geo_source
+    properties:
+      type:
+        enum:
+          - LodgingBusiness
+          - Hotel
+      name_source: {type: string}
+      address_source: {type: string}
+      phone_source: {type: string}
+      image: {type: string}
+      price_range: {type: string}
+      geo_source: {type: string}
+
+  ai_search:
+    type: object
+    additionalProperties: false
+    required:
+      - enabled
+      - summary_source
+      - preferred_topics
+      - factual_only
+      - prohibit_unverified_claims
+    properties:
+      enabled: {type: boolean}
+      summary_source: {type: string}
+      preferred_topics:
+        type: array
+        items: {type: string}
+      factual_only: {const: true}
+      prohibit_unverified_claims: {const: true}
+
+  references:
+    type: object
+    additionalProperties: false
+    required: [hotel,brand,website,ota]
+    properties:
+      hotel: {const: hotel.yaml}
+      brand: {const: brand.yaml}
+      website: {const: website.yaml}
+      ota: {const: ota.yaml}
+
+  governance:
+    type: object
+    additionalProperties: false
+    required:
+      - ssot
+      - manual_review_required
+      - validation_required_before_publish
+      - preserve_fact_accuracy
+      - prohibit_keyword_stuffing
+    properties:
+      ssot: {const: true}
+      manual_review_required: {const: true}
+      validation_required_before_publish: {const: true}
+      preserve_fact_accuracy: {const: true}
+      prohibit_keyword_stuffing: {const: true}
+
+  configuration:
+    type: object
+    additionalProperties: false
+    required:
+      - generator_ready
+      - validator_ready
+      - template_compatible
+      - notes
+    properties:
+      generator_ready: {type: boolean}
+      validator_ready: {type: boolean}
+      template_compatible: {type: boolean}
+      notes: {type: string}
+
+$defs:
+  langpair:
+    type: object
+    additionalProperties: false
+    required: [zh,en]
+    properties:
+      zh:
+        type: string
+        minLength: 1
+      en:
+        type: string
+        minLength: 1

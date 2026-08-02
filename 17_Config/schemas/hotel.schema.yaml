@@ -1,0 +1,1697 @@
+# =====================================================================
+# HotelAIOS / AIGOS
+# Hotel Schema
+# File: hotel.schema.yaml
+# Applies To: hotel.yaml
+# Schema Version: 1.0.0
+# Status: Official Release
+# Updated: 2026-08-02
+# =====================================================================
+
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://hotelaios.local/schemas/hotel.schema.yaml"
+
+title: HotelAIOS Hotel Configuration Schema
+description: >
+  Validates the property-level hotel.yaml file used by HotelAIOS.
+  Unknown or unverified business values may be represented by null or an empty string
+  where explicitly allowed by this schema.
+
+type: object
+additionalProperties: false
+
+required:
+  - property
+  - metadata
+  - legal_identity
+  - commercial_identity
+  - location
+  - contact
+  - operations
+  - accommodation
+  - oxygen_service
+  - breakfast
+  - internet
+  - climate_and_water
+  - facilities
+  - laundry
+  - parking
+  - transportation
+  - nearby_places
+  - payments
+  - guest_segments
+  - policies
+  - accessibility
+  - safety
+  - sustainability
+  - media
+  - systems
+  - references
+  - governance
+  - configuration
+
+properties:
+  property:
+    type: object
+    additionalProperties: false
+
+    required:
+      - property_id
+      - property_name
+      - property_name_en
+      - property_type
+      - property_type_name
+      - property_type_name_en
+      - operating_model
+      - lifecycle_status
+      - enabled
+      - deletion_protection
+
+    properties:
+      property_id:
+        type: string
+        pattern: "^[a-z0-9]+(?:-[a-z0-9]+)*-[0-9]{3}$"
+
+      property_name:
+        type: string
+        minLength: 1
+
+      property_name_en:
+        type: string
+        minLength: 1
+
+      short_name:
+        type: string
+        minLength: 1
+
+      short_name_en:
+        type: string
+        minLength: 1
+
+      property_type:
+        type: string
+        enum:
+          - hotel
+          - inn
+          - homestay
+          - guesthouse
+          - hostel
+          - resort
+          - lodge
+          - serviced-apartment
+          - boutique-hotel
+          - heritage-hotel
+          - other-accommodation
+
+      property_type_name:
+        type: string
+        minLength: 1
+
+      property_type_name_en:
+        type: string
+        minLength: 1
+
+      operating_model:
+        type: string
+        enum:
+          - independent
+          - managed
+          - franchised
+          - leased
+          - owner-operated
+
+      lifecycle_status:
+        type: string
+        enum:
+          - draft
+          - active
+          - inactive
+          - archived
+
+      enabled:
+        type: boolean
+
+      deletion_protection:
+        const: true
+
+  metadata:
+    type: object
+    additionalProperties: false
+    required:
+      - schema_version
+      - file_version
+      - created_at
+      - updated_at
+      - maintained_by
+      - source
+      - verification_status
+      - review_required
+      - default_language
+      - timezone
+    properties:
+      schema_version:
+        const: "1.0"
+      file_version:
+        type: string
+        pattern: "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+      created_at:
+        type: string
+        format: date
+      updated_at:
+        type: string
+        format: date
+      maintained_by:
+        type: string
+        minLength: 1
+      source:
+        type: string
+        minLength: 1
+      verification_status:
+        type: string
+        enum:
+          - unverified
+          - partially-verified
+          - owner-confirmed
+          - verified
+      review_required:
+        type: boolean
+      default_language:
+        type: string
+        enum:
+          - zh-CN
+          - en
+      timezone:
+        type: string
+        minLength: 1
+
+  legal_identity:
+    type: object
+    additionalProperties: false
+    required:
+      - operating_company
+      - registration_number
+      - tax_identifier
+      - ownership_type
+      - license_status
+    properties:
+      operating_company:
+        $ref: "#/$defs/bilingual_name"
+      registration_number:
+        type: string
+      tax_identifier:
+        type: string
+      ownership_type:
+        type: string
+      license_status:
+        type: string
+
+  commercial_identity:
+    type: object
+    additionalProperties: false
+    required:
+      - display_name_zh
+      - display_name_en
+      - accommodation_category
+      - market_positioning_zh
+      - market_positioning_en
+      - opening
+    properties:
+      display_name_zh:
+        type: string
+        minLength: 1
+      display_name_en:
+        type: string
+        minLength: 1
+      accommodation_category:
+        type: string
+        minLength: 1
+      market_positioning_zh:
+        type: string
+        minLength: 1
+      market_positioning_en:
+        type: string
+        minLength: 1
+      opening:
+        type: object
+        additionalProperties: false
+        required:
+          - opening_year
+          - opening_month
+          - opening_date
+          - operating_status
+        properties:
+          opening_year:
+            type: integer
+            minimum: 1900
+            maximum: 2200
+          opening_month:
+            type: integer
+            minimum: 1
+            maximum: 12
+          opening_date:
+            type: string
+            pattern: "^[0-9]{4}-[0-9]{2}$"
+          operating_status:
+            type: string
+            enum:
+              - pre-opening
+              - active
+              - temporarily-closed
+              - permanently-closed
+
+  location:
+    type: object
+    additionalProperties: false
+    required:
+      - country
+      - province
+      - city
+      - district
+      - locality
+      - neighborhood
+      - street
+      - full_address
+      - postal_code
+      - coordinates
+      - altitude_meters
+      - timezone
+    properties:
+      country:
+        type: object
+        additionalProperties: false
+        required:
+          - code
+          - name_zh
+          - name_en
+        properties:
+          code:
+            type: string
+            pattern: "^[A-Z]{2}$"
+          name_zh:
+            type: string
+            minLength: 1
+          name_en:
+            type: string
+            minLength: 1
+      province:
+        $ref: "#/$defs/bilingual_name"
+      city:
+        $ref: "#/$defs/bilingual_name"
+      district:
+        $ref: "#/$defs/bilingual_name"
+      locality:
+        $ref: "#/$defs/bilingual_name"
+      neighborhood:
+        $ref: "#/$defs/bilingual_name"
+      street:
+        $ref: "#/$defs/bilingual_name"
+      full_address:
+        type: object
+        additionalProperties: false
+        required:
+          - zh
+          - en
+        properties:
+          zh:
+            type: string
+            minLength: 1
+          en:
+            type: string
+            minLength: 1
+      postal_code:
+        type: string
+        minLength: 1
+      coordinates:
+        type: object
+        additionalProperties: false
+        required:
+          - latitude
+          - longitude
+          - latitude_dms
+          - longitude_dms
+          - source
+          - verification_status
+        properties:
+          latitude:
+            type: number
+            minimum: -90
+            maximum: 90
+          longitude:
+            type: number
+            minimum: -180
+            maximum: 180
+          latitude_dms:
+            type: string
+          longitude_dms:
+            type: string
+          source:
+            type: string
+            minLength: 1
+          verification_status:
+            type: string
+            enum:
+              - pending-google-maps-pin-verification
+              - owner-confirmed
+              - map-confirmed
+              - verified
+      altitude_meters:
+        type:
+          - number
+          - "null"
+      timezone:
+        type: string
+        minLength: 1
+
+  contact:
+    type: object
+    additionalProperties: false
+    required:
+      - phone
+      - email
+      - wechat
+      - whatsapp
+      - website
+    properties:
+      phone:
+        type: object
+        additionalProperties: false
+        required:
+          - primary
+          - normalized
+          - reservations
+          - emergency
+        properties:
+          primary:
+            type: string
+            minLength: 1
+          normalized:
+            type: string
+            pattern: "^\\+[0-9]{7,15}$"
+          reservations:
+            type: string
+            minLength: 1
+          emergency:
+            type: string
+      email:
+        type: object
+        additionalProperties: false
+        required:
+          - primary
+          - reservations
+        properties:
+          primary:
+            type: string
+            format: email
+          reservations:
+            type: string
+            format: email
+      wechat:
+        type: object
+        additionalProperties: false
+        required:
+          - account
+          - display
+        properties:
+          account:
+            type: string
+            minLength: 1
+          display:
+            type: string
+            minLength: 1
+      whatsapp:
+        type: object
+        additionalProperties: false
+        required:
+          - number
+          - normalized
+        properties:
+          number:
+            type: string
+            minLength: 1
+          normalized:
+            type: string
+            pattern: "^\\+[0-9]{7,15}$"
+      website:
+        type: object
+        additionalProperties: false
+        required:
+          - url
+          - status
+        properties:
+          url:
+            type: string
+          status:
+            type: string
+            enum:
+              - coming-soon
+              - active
+              - inactive
+
+  operations:
+    type: object
+    additionalProperties: false
+    required:
+      - front_desk
+      - check_in
+      - check_out
+      - capacity
+      - accepted_currency
+      - languages
+    properties:
+      front_desk:
+        $ref: "#/$defs/availability_block"
+      check_in:
+        $ref: "#/$defs/check_time_block"
+      check_out:
+        $ref: "#/$defs/check_time_block"
+      capacity:
+        type: object
+        additionalProperties: false
+        required:
+          - total_rooms
+          - maximum_guests
+          - building_count
+          - floor_count
+        properties:
+          total_rooms:
+            type: integer
+            minimum: 1
+          maximum_guests:
+            type: integer
+            minimum: 1
+          building_count:
+            type: integer
+            minimum: 1
+          floor_count:
+            type:
+              - integer
+              - "null"
+            minimum: 1
+      accepted_currency:
+        type: array
+        minItems: 1
+        uniqueItems: true
+        items:
+          type: string
+          pattern: "^[A-Z]{3}$"
+      languages:
+        type: object
+        additionalProperties: false
+        required:
+          - default
+          - supported
+          - chinese_available
+          - english_available
+          - other_languages
+        properties:
+          default:
+            type: string
+          supported:
+            type: array
+            minItems: 1
+            uniqueItems: true
+            items:
+              type: string
+          chinese_available:
+            type: boolean
+          english_available:
+            type: boolean
+          other_languages:
+            type: array
+            uniqueItems: true
+            items:
+              type: string
+
+  accommodation:
+    type: object
+    additionalProperties: false
+    required:
+      - total_rooms
+      - total_room_types
+      - inventory_verified
+      - room_types
+    properties:
+      total_rooms:
+        type: integer
+        minimum: 1
+      total_room_types:
+        type: integer
+        minimum: 1
+      inventory_verified:
+        type: boolean
+      room_types:
+        type: array
+        minItems: 1
+        items:
+          $ref: "#/$defs/room_type"
+
+  oxygen_service:
+    type: object
+    additionalProperties: false
+    required:
+      - available
+      - service_name_zh
+      - service_name_en
+      - coverage
+      - operating_hours
+      - system_type
+      - equipment_details
+      - medical_service
+      - medical_claims_allowed
+      - description_zh
+      - description_en
+      - disclaimer_zh
+      - disclaimer_en
+    properties:
+      available:
+        type: boolean
+      service_name_zh:
+        type: string
+        minLength: 1
+      service_name_en:
+        type: string
+        minLength: 1
+      coverage:
+        type: string
+      operating_hours:
+        type: string
+      system_type:
+        type: string
+      equipment_details:
+        type: string
+      medical_service:
+        const: false
+      medical_claims_allowed:
+        const: false
+      description_zh:
+        type: string
+        minLength: 1
+      description_en:
+        type: string
+        minLength: 1
+      disclaimer_zh:
+        type: string
+        minLength: 1
+      disclaimer_en:
+        type: string
+        minLength: 1
+
+  breakfast:
+    type: object
+    additionalProperties: false
+    required:
+      - available
+      - included
+      - complimentary
+      - type
+      - name_zh
+      - name_en
+      - serving_time
+      - serving_location
+      - dietary_options
+      - reservation_required
+    properties:
+      available:
+        type: boolean
+      included:
+        type: boolean
+      complimentary:
+        type: boolean
+      type:
+        type: string
+      name_zh:
+        type: string
+        minLength: 1
+      name_en:
+        type: string
+        minLength: 1
+      serving_time:
+        type: object
+        additionalProperties: false
+        required:
+          - start
+          - end
+        properties:
+          start:
+            $ref: "#/$defs/time_string"
+          end:
+            $ref: "#/$defs/time_string"
+      serving_location:
+        type: string
+      dietary_options:
+        type: array
+        items:
+          type: string
+      reservation_required:
+        type: boolean
+
+  internet:
+    type: object
+    additionalProperties: false
+    required:
+      - wifi_available
+      - complimentary
+      - advertised_speed_mbps
+      - coverage
+      - network_name
+      - password_management
+      - description_zh
+      - description_en
+    properties:
+      wifi_available:
+        type: boolean
+      complimentary:
+        type: boolean
+      advertised_speed_mbps:
+        type: number
+        minimum: 0
+      coverage:
+        type: string
+      network_name:
+        type: string
+      password_management:
+        type: string
+      description_zh:
+        type: string
+      description_en:
+        type: string
+
+  climate_and_water:
+    type: object
+    additionalProperties: false
+    required:
+      - air_conditioning
+      - hot_water
+      - ventilation
+    properties:
+      air_conditioning:
+        type: object
+        additionalProperties: false
+        required:
+          - available
+          - type
+          - cooling_available
+          - heating_available
+          - independently_controlled
+        properties:
+          available:
+            type: boolean
+          type:
+            type: string
+          cooling_available:
+            type: boolean
+          heating_available:
+            type: boolean
+          independently_controlled:
+            type: boolean
+      hot_water:
+        type: object
+        additionalProperties: false
+        required:
+          - available
+          - twenty_four_hours
+        properties:
+          available:
+            type: boolean
+          twenty_four_hours:
+            type: boolean
+      ventilation:
+        type: object
+        additionalProperties: false
+        required:
+          - natural_ventilation
+          - mechanical_ventilation
+        properties:
+          natural_ventilation:
+            type: boolean
+          mechanical_ventilation:
+            type:
+              - boolean
+              - "null"
+
+  facilities:
+    type: object
+    additionalProperties: false
+    required:
+      - garden
+      - terrace
+      - tea_room
+      - elevator
+      - luggage_storage
+      - public_lounge
+      - reception_area
+    properties:
+      garden:
+        $ref: "#/$defs/named_facility"
+      terrace:
+        type: object
+        additionalProperties: false
+        required:
+          - available
+          - name_zh
+          - name_en
+          - description_zh
+          - description_en
+        properties:
+          available:
+            type: boolean
+          name_zh:
+            type: string
+          name_en:
+            type: string
+          description_zh:
+            type: string
+          description_en:
+            type: string
+      tea_room:
+        $ref: "#/$defs/named_facility"
+      elevator:
+        $ref: "#/$defs/nullable_availability"
+      luggage_storage:
+        $ref: "#/$defs/nullable_availability"
+      public_lounge:
+        $ref: "#/$defs/nullable_availability"
+      reception_area:
+        type: object
+        additionalProperties: false
+        required:
+          - available
+        properties:
+          available:
+            type: boolean
+
+  laundry:
+    type: object
+    additionalProperties: false
+    required:
+      - available
+      - complimentary
+      - self_service
+      - washer_available
+      - dryer_available
+      - ironing_available
+      - description_zh
+      - description_en
+    properties:
+      available:
+        type: boolean
+      complimentary:
+        type: boolean
+      self_service:
+        type: boolean
+      washer_available:
+        type: boolean
+      dryer_available:
+        type: boolean
+      ironing_available:
+        type:
+          - boolean
+          - "null"
+      description_zh:
+        type: string
+      description_en:
+        type: string
+
+  parking:
+    type: object
+    additionalProperties: false
+    required:
+      - available
+      - on_site
+      - type
+      - name_zh
+      - name_en
+      - fee
+      - reservation_required
+      - distance_meters
+      - directions
+    properties:
+      available:
+        type: boolean
+      on_site:
+        type: boolean
+      type:
+        type: string
+      name_zh:
+        type: string
+      name_en:
+        type: string
+      fee:
+        type:
+          - number
+          - "null"
+      reservation_required:
+        type:
+          - boolean
+          - "null"
+      distance_meters:
+        type:
+          - number
+          - "null"
+        minimum: 0
+      directions:
+        type: string
+
+  transportation:
+    type: object
+    additionalProperties: false
+    required:
+      - supported_modes
+      - taxi_assistance
+      - airport_transfer
+      - railway_station_transfer
+      - walking_access
+      - nearest_airport
+      - nearest_railway_station
+    properties:
+      supported_modes:
+        type: array
+        uniqueItems: true
+        items:
+          type: string
+      taxi_assistance:
+        type: boolean
+      airport_transfer:
+        $ref: "#/$defs/transfer_service"
+      railway_station_transfer:
+        $ref: "#/$defs/transfer_service"
+      walking_access:
+        type: object
+        additionalProperties: false
+        required:
+          - lijiang_old_town
+          - description_zh
+          - description_en
+        properties:
+          lijiang_old_town:
+            type: boolean
+          description_zh:
+            type: string
+          description_en:
+            type: string
+      nearest_airport:
+        $ref: "#/$defs/nearby_transport_hub"
+      nearest_railway_station:
+        $ref: "#/$defs/nearby_transport_hub"
+
+  nearby_places:
+    type: array
+    items:
+      $ref: "#/$defs/nearby_place"
+
+  payments:
+    type: object
+    additionalProperties: false
+    required:
+      - accepted
+      - currencies
+      - deposits
+      - invoicing
+    properties:
+      accepted:
+        type: object
+        additionalProperties: false
+        required:
+          - cash
+          - visa
+          - mastercard
+          - unionpay
+          - alipay
+          - wechat_pay
+          - american_express
+        properties:
+          cash:
+            type: boolean
+          visa:
+            type: boolean
+          mastercard:
+            type: boolean
+          unionpay:
+            type: boolean
+          alipay:
+            type: boolean
+          wechat_pay:
+            type: boolean
+          american_express:
+            type: boolean
+      currencies:
+        type: array
+        minItems: 1
+        uniqueItems: true
+        items:
+          type: string
+          pattern: "^[A-Z]{3}$"
+      deposits:
+        type: object
+        additionalProperties: false
+        required:
+          - required
+          - amount
+          - currency
+        properties:
+          required:
+            type:
+              - boolean
+              - "null"
+          amount:
+            type:
+              - number
+              - "null"
+          currency:
+            type: string
+            pattern: "^[A-Z]{3}$"
+      invoicing:
+        type: object
+        additionalProperties: false
+        required:
+          - available
+          - invoice_type
+        properties:
+          available:
+            type:
+              - boolean
+              - "null"
+          invoice_type:
+            type: array
+            items:
+              type: string
+
+  guest_segments:
+    type: object
+    additionalProperties: false
+    required:
+      - couples
+      - families
+      - children
+      - seniors
+      - international_guests
+      - long_stay
+      - groups
+    properties:
+      couples:
+        $ref: "#/$defs/supported_block"
+      families:
+        $ref: "#/$defs/supported_block"
+      children:
+        $ref: "#/$defs/supported_block"
+      seniors:
+        $ref: "#/$defs/supported_block"
+      international_guests:
+        $ref: "#/$defs/supported_block"
+      long_stay:
+        $ref: "#/$defs/supported_block"
+      groups:
+        type: object
+        additionalProperties: false
+        required:
+          - supported
+          - maximum_group_size
+        properties:
+          supported:
+            type: boolean
+          maximum_group_size:
+            type:
+              - integer
+              - "null"
+            minimum: 1
+
+  policies:
+    type: object
+    additionalProperties: false
+    required:
+      - children
+      - pets
+      - smoking
+      - quiet_hours
+      - parties
+      - visitors
+      - cancellation
+      - damage_deposit
+      - identification
+    properties:
+      children:
+        type: object
+        additionalProperties: false
+        required:
+          - allowed
+          - age_definition
+          - extra_bed_available
+          - crib_available
+        properties:
+          allowed:
+            type: boolean
+          age_definition:
+            type: string
+          extra_bed_available:
+            type:
+              - boolean
+              - "null"
+          crib_available:
+            type:
+              - boolean
+              - "null"
+      pets:
+        type: object
+        additionalProperties: false
+        required:
+          - allowed
+          - restrictions
+        properties:
+          allowed:
+            type:
+              - boolean
+              - "null"
+          restrictions:
+            type: string
+      smoking:
+        type: object
+        additionalProperties: false
+        required:
+          - policy
+          - designated_area_available
+        properties:
+          policy:
+            type: string
+          designated_area_available:
+            type:
+              - boolean
+              - "null"
+      quiet_hours:
+        type: object
+        additionalProperties: false
+        required:
+          - enabled
+          - start
+          - end
+        properties:
+          enabled:
+            type:
+              - boolean
+              - "null"
+          start:
+            type: string
+          end:
+            type: string
+      parties:
+        type: object
+        additionalProperties: false
+        required:
+          - allowed
+        properties:
+          allowed:
+            type:
+              - boolean
+              - "null"
+      visitors:
+        type: object
+        additionalProperties: false
+        required:
+          - allowed
+          - registration_required
+        properties:
+          allowed:
+            type:
+              - boolean
+              - "null"
+          registration_required:
+            type:
+              - boolean
+              - "null"
+      cancellation:
+        type: object
+        additionalProperties: false
+        required:
+          - policy_reference
+          - property_level_default
+        properties:
+          policy_reference:
+            type: string
+          property_level_default:
+            type: string
+      damage_deposit:
+        type: object
+        additionalProperties: false
+        required:
+          - required
+          - amount
+          - currency
+        properties:
+          required:
+            type:
+              - boolean
+              - "null"
+          amount:
+            type:
+              - number
+              - "null"
+          currency:
+            type: string
+      identification:
+        type: object
+        additionalProperties: false
+        required:
+          - required
+          - accepted_documents
+        properties:
+          required:
+            type:
+              - boolean
+              - "null"
+          accepted_documents:
+            type: array
+            items:
+              type: string
+
+  accessibility:
+    $ref: "#/$defs/accessibility_block"
+
+  safety:
+    type: object
+    additionalProperties: false
+    required:
+      - fire_extinguishers
+      - smoke_detectors
+      - carbon_monoxide_detectors
+      - emergency_lighting
+      - evacuation_plan
+      - first_aid_kit
+      - security_cameras_public_areas
+      - twenty_four_hour_security
+      - emergency_numbers
+    properties:
+      fire_extinguishers:
+        $ref: "#/$defs/nullable_boolean"
+      smoke_detectors:
+        $ref: "#/$defs/nullable_boolean"
+      carbon_monoxide_detectors:
+        $ref: "#/$defs/nullable_boolean"
+      emergency_lighting:
+        $ref: "#/$defs/nullable_boolean"
+      evacuation_plan:
+        $ref: "#/$defs/nullable_boolean"
+      first_aid_kit:
+        $ref: "#/$defs/nullable_boolean"
+      security_cameras_public_areas:
+        $ref: "#/$defs/nullable_boolean"
+      twenty_four_hour_security:
+        $ref: "#/$defs/nullable_boolean"
+      emergency_numbers:
+        type: object
+        additionalProperties: false
+        required:
+          - police
+          - fire
+          - ambulance
+        properties:
+          police:
+            type: string
+          fire:
+            type: string
+          ambulance:
+            type: string
+
+  sustainability:
+    type: object
+    additionalProperties: false
+    required:
+      - enabled
+      - waste_sorting
+      - reusable_amenities
+      - water_saving
+      - energy_saving
+      - local_sourcing
+      - notes
+    properties:
+      enabled:
+        $ref: "#/$defs/nullable_boolean"
+      waste_sorting:
+        $ref: "#/$defs/nullable_boolean"
+      reusable_amenities:
+        $ref: "#/$defs/nullable_boolean"
+      water_saving:
+        $ref: "#/$defs/nullable_boolean"
+      energy_saving:
+        $ref: "#/$defs/nullable_boolean"
+      local_sourcing:
+        $ref: "#/$defs/nullable_boolean"
+      notes:
+        type: string
+
+  media:
+    type: object
+    additionalProperties: false
+    required:
+      - logo
+      - cover_image
+      - gallery
+      - room_galleries
+      - floor_plans
+      - virtual_tour_url
+      - video_urls
+      - media_verification_status
+    properties:
+      logo:
+        type: string
+      cover_image:
+        type: string
+      gallery:
+        type: array
+        items:
+          type: string
+      room_galleries:
+        type: object
+      floor_plans:
+        type: array
+        items:
+          type: string
+      virtual_tour_url:
+        type: string
+      video_urls:
+        type: array
+        items:
+          type: string
+      media_verification_status:
+        type: string
+        enum:
+          - not-provided
+          - partially-provided
+          - verified
+
+  systems:
+    type: object
+    additionalProperties: false
+    required:
+      - website_enabled
+      - ai_enabled
+      - knowledge_enabled
+      - rag_enabled
+      - ota_enabled
+      - crm_enabled
+      - analytics_enabled
+      - deployment_enabled
+      - booking_engine_enabled
+    properties:
+      website_enabled:
+        type: boolean
+      ai_enabled:
+        type: boolean
+      knowledge_enabled:
+        type: boolean
+      rag_enabled:
+        type: boolean
+      ota_enabled:
+        type: boolean
+      crm_enabled:
+        type: boolean
+      analytics_enabled:
+        type: boolean
+      deployment_enabled:
+        type: boolean
+      booking_engine_enabled:
+        type: boolean
+
+  references:
+    type: object
+    additionalProperties: false
+    required:
+      - registry
+      - brand
+      - website
+      - seo
+      - ota
+      - knowledge_root
+      - manuals_root
+    properties:
+      registry:
+        type: string
+        minLength: 1
+      brand:
+        const: brand.yaml
+      website:
+        const: website.yaml
+      seo:
+        const: seo.yaml
+      ota:
+        const: ota.yaml
+      knowledge_root:
+        type: string
+        minLength: 1
+      manuals_root:
+        type: string
+        minLength: 1
+
+  governance:
+    type: object
+    additionalProperties: false
+    required:
+      - authoritative_source
+      - property_id_immutable
+      - preserve_existing_data
+      - preserve_historical_values
+      - allow_automatic_overwrite
+      - allow_automatic_deletion
+      - deletion_protection
+      - manual_review_required
+      - validation_required_before_publish
+      - unverified_claims_publish_prohibited
+      - medical_claims_prohibited
+      - source_attribution_required_for_external_data
+      - last_verified_at
+      - verified_by
+    properties:
+      authoritative_source:
+        type: string
+        minLength: 1
+      property_id_immutable:
+        const: true
+      preserve_existing_data:
+        const: true
+      preserve_historical_values:
+        const: true
+      allow_automatic_overwrite:
+        const: false
+      allow_automatic_deletion:
+        const: false
+      deletion_protection:
+        const: true
+      manual_review_required:
+        const: true
+      validation_required_before_publish:
+        const: true
+      unverified_claims_publish_prohibited:
+        const: true
+      medical_claims_prohibited:
+        const: true
+      source_attribution_required_for_external_data:
+        const: true
+      last_verified_at:
+        type: string
+      verified_by:
+        type: string
+
+  configuration:
+    type: object
+    additionalProperties: false
+    required:
+      - ssot
+      - specification_version
+      - file_version
+      - environment
+      - template_compatible
+      - generator_ready
+      - validator_ready
+      - notes
+    properties:
+      ssot:
+        const: true
+      specification_version:
+        const: "1.0"
+      file_version:
+        type: string
+        pattern: "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+      environment:
+        type: string
+        enum:
+          - development
+          - implementation
+          - production
+          - archived
+      template_compatible:
+        type: boolean
+      generator_ready:
+        type: boolean
+      validator_ready:
+        type: boolean
+      notes:
+        type: string
+        minLength: 1
+
+allOf:
+  - description: The room quantities must be checked by the HotelAIOS cross-file validator.
+  - description: property.property_id must match the directory name and registry record.
+  - description: accommodation.total_rooms must equal the sum of room_types[].quantity.
+  - description: accommodation.total_room_types must equal the number of room_types.
+  - description: metadata.file_version must equal configuration.file_version.
+
+$defs:
+  nullable_boolean:
+    type:
+      - boolean
+      - "null"
+
+  bilingual_name:
+    type: object
+    additionalProperties: false
+    required:
+      - name_zh
+      - name_en
+    properties:
+      name_zh:
+        type: string
+        minLength: 1
+      name_en:
+        type: string
+        minLength: 1
+
+  time_string:
+    type: string
+    pattern: "^([01][0-9]|2[0-3]):[0-5][0-9]$"
+
+  availability_block:
+    type: object
+    additionalProperties: false
+    required:
+      - available
+      - hours
+      - twenty_four_hours
+    properties:
+      available:
+        type: boolean
+      hours:
+        type: string
+      twenty_four_hours:
+        type:
+          - boolean
+          - "null"
+
+  check_time_block:
+    type: object
+    additionalProperties: false
+    required:
+      - standard_time
+    properties:
+      standard_time:
+        $ref: "#/$defs/time_string"
+      early_check_in_available:
+        type:
+          - boolean
+          - "null"
+      late_check_out_available:
+        type:
+          - boolean
+          - "null"
+      identification_required:
+        type:
+          - boolean
+          - "null"
+
+  room_type:
+    type: object
+    additionalProperties: false
+    required:
+      - room_type_id
+      - name_zh
+      - name_en
+      - quantity
+      - maximum_guests
+      - room_size_sqm
+      - bed_configuration
+      - oxygen_supply
+      - status
+    properties:
+      room_type_id:
+        type: string
+        pattern: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      name_zh:
+        type: string
+        minLength: 1
+      name_en:
+        type: string
+        minLength: 1
+      quantity:
+        type: integer
+        minimum: 1
+      maximum_guests:
+        type:
+          - integer
+          - "null"
+        minimum: 1
+      room_size_sqm:
+        type:
+          - number
+          - "null"
+        minimum: 1
+      bed_configuration:
+        type: object
+        additionalProperties: false
+        required:
+          - bed_type
+          - bed_count
+          - bed_size
+        properties:
+          bed_type:
+            type: string
+          bed_count:
+            type:
+              - integer
+              - "null"
+            minimum: 1
+          bed_size:
+            type: string
+      oxygen_supply:
+        type: boolean
+      status:
+        type: string
+        enum:
+          - draft
+          - active
+          - inactive
+          - archived
+
+  named_facility:
+    type: object
+    additionalProperties: false
+    required:
+      - available
+      - name_zh
+      - name_en
+    properties:
+      available:
+        type: boolean
+      name_zh:
+        type: string
+      name_en:
+        type: string
+
+  nullable_availability:
+    type: object
+    additionalProperties: false
+    required:
+      - available
+    properties:
+      available:
+        type:
+          - boolean
+          - "null"
+
+  transfer_service:
+    type: object
+    additionalProperties: false
+    required:
+      - available
+      - reservation_required
+      - fee
+    properties:
+      available:
+        type:
+          - boolean
+          - "null"
+      complimentary:
+        type:
+          - boolean
+          - "null"
+      reservation_required:
+        type:
+          - boolean
+          - "null"
+      fee:
+        type:
+          - number
+          - "null"
+
+  nearby_transport_hub:
+    type: object
+    additionalProperties: false
+    required:
+      - name_zh
+      - name_en
+      - distance_km
+    properties:
+      name_zh:
+        type: string
+      name_en:
+        type: string
+      distance_km:
+        type:
+          - number
+          - "null"
+        minimum: 0
+
+  nearby_place:
+    type: object
+    additionalProperties: false
+    required:
+      - place_id
+      - name_zh
+      - name_en
+      - category
+      - distance_meters
+      - walking_minutes
+    properties:
+      place_id:
+        type: string
+        pattern: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      name_zh:
+        type: string
+        minLength: 1
+      name_en:
+        type: string
+        minLength: 1
+      category:
+        type: string
+      distance_meters:
+        type:
+          - number
+          - "null"
+        minimum: 0
+      walking_minutes:
+        type:
+          - number
+          - "null"
+        minimum: 0
+
+  supported_block:
+    type: object
+    additionalProperties: false
+    required:
+      - supported
+    properties:
+      supported:
+        type: boolean
+
+  accessibility_block:
+    type: object
+    additionalProperties: false
+    required:
+      - wheelchair_accessible
+      - step_free_access
+      - accessible_rooms_available
+      - accessible_bathroom_available
+      - elevator_available
+      - assistance_available
+      - notes
+    properties:
+      wheelchair_accessible:
+        $ref: "#/$defs/nullable_boolean"
+      step_free_access:
+        $ref: "#/$defs/nullable_boolean"
+      accessible_rooms_available:
+        $ref: "#/$defs/nullable_boolean"
+      accessible_bathroom_available:
+        $ref: "#/$defs/nullable_boolean"
+      elevator_available:
+        $ref: "#/$defs/nullable_boolean"
+      assistance_available:
+        $ref: "#/$defs/nullable_boolean"
+      notes:
+        type: string

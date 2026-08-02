@@ -1,0 +1,152 @@
+# =====================================================================
+# HotelAIOS / AIGOS
+# Website Configuration
+# File: website.yaml
+# Property: Sanlitian Oxygen Boutique Guesthouse
+# Property ID: sanlitian-oxygen-guesthouse-001
+# Configuration Specification: 1.0
+# File Version: 4.0.0
+# Status: Official Release
+# Updated: 2026-08-02
+# =====================================================================
+
+website:
+  property_id: sanlitian-oxygen-guesthouse-001
+  site_id: sanlitian-official
+  site_name: Sanlitian Oxygen Boutique Guesthouse
+  enabled: true
+  default_language: zh-CN
+  supported_languages:
+    - zh-CN
+    - en
+
+metadata:
+  schema_version: "1.0"
+  file_version: "4.0.0"
+  created_at: "2026-08-02"
+  updated_at: "2026-08-02"
+  maintained_by: HotelAIOS
+  source: property-owner
+
+deployment:
+  environment: production
+  domain:
+    primary: ""
+    status: coming-soon
+  ssl:
+    enabled: true
+    provider: ""
+  cdn:
+    enabled: false
+
+branding:
+  logo: ""
+  favicon: ""
+  theme:
+    style: natural
+    primary_color: ""
+    secondary_color: ""
+    accent_color: ""
+
+navigation:
+  header:
+    - id: home
+      zh: 首页
+      en: Home
+    - id: rooms
+      zh: 客房
+      en: Rooms
+    - id: facilities
+      zh: 设施
+      en: Facilities
+    - id: story
+      zh: 品牌故事
+      en: Story
+    - id: location
+      zh: 位置
+      en: Location
+    - id: contact
+      zh: 联系我们
+      en: Contact
+
+homepage:
+  hero:
+    enabled: true
+    title_source: brand.yaml:slogans.primary
+    description_source: brand.yaml:messaging.short_description
+    cover_image: ""
+    primary_cta:
+      zh: 立即预订
+      en: Book Now
+    secondary_cta:
+      zh: 联系我们
+      en: Contact Us
+
+  sections:
+    - hero
+    - brand-story
+    - room-types
+    - facilities
+    - breakfast
+    - nearby-attractions
+    - location
+    - contact
+
+pages:
+  home: true
+  rooms: true
+  facilities: true
+  story: true
+  location: true
+  contact: true
+  privacy: true
+  terms: true
+
+footer:
+  show_contact: true
+  show_address: true
+  show_copyright: true
+  copyright: "© Sanlitian Oxygen Boutique Guesthouse"
+
+booking:
+  enabled: false
+  booking_engine: ""
+  reservation_email_source: hotel.yaml:contact.email.primary
+  reservation_phone_source: hotel.yaml:contact.phone.primary
+
+social:
+  wechat: ""
+  whatsapp: "hotel.yaml:contact.whatsapp.number"
+  facebook: ""
+  instagram: ""
+  x: ""
+  youtube: ""
+
+analytics:
+  google_analytics: ""
+  google_tag_manager: ""
+  microsoft_clarity: ""
+
+seo:
+  configuration_source: seo.yaml
+
+references:
+  hotel: hotel.yaml
+  brand: brand.yaml
+  seo: seo.yaml
+  ota: ota.yaml
+
+governance:
+  ssot: true
+  allow_automatic_overwrite: false
+  manual_review_required: true
+  validation_required_before_publish: true
+
+configuration:
+  generator_ready: true
+  validator_ready: true
+  template_compatible: true
+  notes: >
+    网站配置仅负责网站结构、导航、部署和页面配置。
+    酒店信息引用 hotel.yaml，品牌内容引用 brand.yaml，
+    SEO 内容引用 seo.yaml，不重复维护业务数据。

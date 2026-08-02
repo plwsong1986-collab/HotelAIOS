@@ -1,0 +1,357 @@
+{
+  "validator_version": "2.0.0",
+  "project_root": "D:\\HotelAIOS",
+  "started_at": "2026-08-02T22:48:10+08:00",
+  "finished_at": "2026-08-02T22:48:11+08:00",
+  "properties_checked": 1,
+  "files_checked": 12,
+  "schemas_checked": 6,
+  "findings": [
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "Additional properties are not allowed ('configuration', 'governance', 'publishing', 'required_property_files', 'supported_statuses' were unexpected)",
+      "file": "17_Config/properties.yaml",
+      "path": "$"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "Additional properties are not allowed ('configuration_files', 'localization', 'location', 'metadata', 'operating_model', 'ownership', 'property_name', 'property_name_en', 'property_type_name', 'property_type_name_en', 'publishing' were unexpected)",
+      "file": "17_Config/properties.yaml",
+      "path": "$.properties[0]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'name' is a required property",
+      "file": "17_Config/properties.yaml",
+      "path": "$.properties[0]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'chinese_name' is a required property",
+      "file": "17_Config/properties.yaml",
+      "path": "$.properties[0]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'created_at' is a required property",
+      "file": "17_Config/properties.yaml",
+      "path": "$.properties[0]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'updated_at' is a required property",
+      "file": "17_Config/properties.yaml",
+      "path": "$.properties[0]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'inn' is not one of ['hotel', 'guesthouse', 'boutique_hotel', 'homestay', 'hostel', 'resort', 'villa']",
+      "file": "17_Config/properties.yaml",
+      "path": "$.supported_property_types[1]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'other-accommodation' is not one of ['hotel', 'guesthouse', 'boutique_hotel', 'homestay', 'hostel', 'resort', 'villa']",
+      "file": "17_Config/properties.yaml",
+      "path": "$.supported_property_types[10]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'lodge' is not one of ['hotel', 'guesthouse', 'boutique_hotel', 'homestay', 'hostel', 'resort', 'villa']",
+      "file": "17_Config/properties.yaml",
+      "path": "$.supported_property_types[6]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'serviced-apartment' is not one of ['hotel', 'guesthouse', 'boutique_hotel', 'homestay', 'hostel', 'resort', 'villa']",
+      "file": "17_Config/properties.yaml",
+      "path": "$.supported_property_types[7]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'boutique-hotel' is not one of ['hotel', 'guesthouse', 'boutique_hotel', 'homestay', 'hostel', 'resort', 'villa']",
+      "file": "17_Config/properties.yaml",
+      "path": "$.supported_property_types[8]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'heritage-hotel' is not one of ['hotel', 'guesthouse', 'boutique_hotel', 'homestay', 'hostel', 'resort', 'villa']",
+      "file": "17_Config/properties.yaml",
+      "path": "$.supported_property_types[9]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'2.0' was expected",
+      "file": "17_Config/properties.yaml",
+      "path": "$.version"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "Additional properties are not allowed ('short_name', 'short_name_en' were unexpected)",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/hotel.yaml",
+      "path": "$.property"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "Additional properties are not allowed ('ai_brand_profile', 'audiences', 'brand_philosophy', 'brand_promise', 'configuration', 'content_guidelines', 'experience', 'governance', 'identity', 'messaging', 'metadata', 'personality', 'positioning', 'references', 'slogans', 'visual_identity' were unexpected)",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'philosophy' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'promise' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'slogan' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "Additional properties are not allowed ('brand_id', 'brand_model', 'brand_name', 'brand_name_en', 'deletion_protection', 'enabled', 'property_id', 'property_name', 'property_name_en', 'status' were unexpected)",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.brand"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'identity' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.brand"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "Additional properties are not allowed ('full_story_en', 'full_story_zh', 'short_summary', 'title' were unexpected)",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.story"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'origin' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.story"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "Additional properties are not allowed ('description_en', 'description_zh', 'name_en', 'name_zh', 'value_id' were unexpected)",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[0]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'name' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[0]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'zh' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[0]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'description' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[0]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "Additional properties are not allowed ('description_en', 'description_zh', 'name_en', 'name_zh', 'value_id' were unexpected)",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[1]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'name' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[1]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'zh' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[1]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'description' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[1]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "Additional properties are not allowed ('description_en', 'description_zh', 'name_en', 'name_zh', 'value_id' were unexpected)",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[2]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'name' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[2]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'zh' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[2]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'description' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[2]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "Additional properties are not allowed ('description_en', 'description_zh', 'name_en', 'name_zh', 'value_id' were unexpected)",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[3]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'name' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[3]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'zh' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[3]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'description' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[3]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "Additional properties are not allowed ('description_en', 'description_zh', 'name_en', 'name_zh', 'value_id' were unexpected)",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[4]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'name' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[4]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'zh' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[4]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'description' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[4]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "Additional properties are not allowed ('description_en', 'description_zh', 'name_en', 'name_zh', 'value_id' were unexpected)",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[5]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'name' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[5]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'zh' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[5]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'description' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.values[5]"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "Additional properties are not allowed ('preferred_words_en', 'preferred_words_zh', 'prohibited_claims', 'tone' were unexpected)",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.voice"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'personality' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.voice"
+    },
+    {
+      "level": "错误",
+      "code": "SCHEMA_VALIDATION_ERROR",
+      "message": "'preferred_words' is a required property",
+      "file": "17_Config/properties/sanlitian-oxygen-guesthouse-001/brand.yaml",
+      "path": "$.voice"
+    }
+  ],
+  "errors": 49,
+  "warnings": 0,
+  "passed": false
+}

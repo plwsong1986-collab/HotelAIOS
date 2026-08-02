@@ -1,0 +1,108 @@
+# =====================================================================
+# HotelAIOS / AIGOS
+# SEO Configuration
+# File: seo.yaml
+# Property: Sanlitian Oxygen Boutique Guesthouse
+# Property ID: sanlitian-oxygen-guesthouse-001
+# Configuration Specification: 1.0
+# File Version: 4.0.0
+# Status: Official Release
+# Updated: 2026-08-02
+# =====================================================================
+
+seo:
+  property_id: sanlitian-oxygen-guesthouse-001
+  enabled: true
+  default_language: zh-CN
+  supported_languages:
+    - zh-CN
+    - en
+
+metadata:
+  schema_version: "1.0"
+  file_version: "4.0.0"
+  created_at: "2026-08-02"
+  updated_at: "2026-08-02"
+  maintained_by: HotelAIOS
+  source: property-owner
+
+site:
+  canonical_url: ""
+  robots: "index,follow"
+  sitemap: "/sitemap.xml"
+
+meta:
+  homepage:
+    title:
+      zh: "三里田供氧客栈｜丽江古城三眼井旁供氧精品客栈"
+      en: "Sanlitian Oxygen Boutique Guesthouse | Oxygen Boutique Guesthouse in Lijiang Old Town"
+    description:
+      zh: "三里田供氧客栈位于丽江古城三眼井旁，提供供氧客房、免费中式早餐、传统庭院、观景露台、茶室及中英文服务。"
+      en: "Stay beside Three-Eyed Well in Lijiang Old Town with oxygen-equipped rooms, complimentary breakfast, courtyard, tea room and warm hospitality."
+    keywords:
+      zh:
+        - 丽江供氧客栈
+        - 丽江古城客栈
+        - 三眼井客栈
+        - 丽江住宿
+        - 丽江精品客栈
+      en:
+        - Lijiang guesthouse
+        - oxygen guesthouse
+        - Lijiang Old Town hotel
+        - Three-Eyed Well
+        - boutique guesthouse
+
+open_graph:
+  type: website
+  site_name: Sanlitian Oxygen Boutique Guesthouse
+  locale: zh_CN
+  image: ""
+
+twitter:
+  card: summary_large_image
+  site: ""
+  creator: ""
+
+structured_data:
+  type: LodgingBusiness
+  name_source: hotel.yaml:property.property_name_en
+  address_source: hotel.yaml:location.full_address.en
+  phone_source: hotel.yaml:contact.phone.primary
+  image: ""
+  price_range: ""
+  geo_source: hotel.yaml:location.coordinates
+
+ai_search:
+  enabled: true
+  summary_source: brand.yaml:ai_brand_profile.canonical_summary_en
+  preferred_topics:
+    - oxygen accommodation
+    - Lijiang Old Town
+    - Three-Eyed Well
+    - boutique guesthouse
+  factual_only: true
+  prohibit_unverified_claims: true
+
+references:
+  hotel: hotel.yaml
+  brand: brand.yaml
+  website: website.yaml
+  ota: ota.yaml
+
+governance:
+  ssot: true
+  manual_review_required: true
+  validation_required_before_publish: true
+  preserve_fact_accuracy: true
+  prohibit_keyword_stuffing: true
+
+configuration:
+  generator_ready: true
+  validator_ready: true
+  template_compatible: true
+  notes: >
+    SEO 配置仅维护搜索引擎和 AI 检索相关配置，
+    酒店基础信息引用 hotel.yaml，
+    品牌内容引用 brand.yaml，
+    不重复维护业务数据。
